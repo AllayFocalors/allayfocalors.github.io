@@ -14,7 +14,6 @@
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
-/*             width: 40%; */
             border-radius: 16px;
             padding: 16px 16px;
             transform:translate (0px,128px);
@@ -43,72 +42,113 @@
           border-radius:32px;
           cursor: pointer;
         }
+        .MainTitle {
+          color:#353535;
+          font-family: helvetica;
+          margin: 0;
+          font-size:8rem;
+          letter-spacing: -0.3rem;
+          position: relative;
+        }
+        .MainTitle::after{
+          content: attr(data-text);
+          color: transparent;
+          position: absolute;
+          top: 100px;
+          background: url(./colorbg1.png);
+          clip-path: circle(100px at 50% 50%);
+          animation: movelight 5s infinite;
+          background-clip: text;
+
+        }
+        @keyframes movelight {
+          0%{
+            clip-path: circle(100px at 0% 50%);
+          }
+          50%{
+            clip-path: circle(100px at 100% 50%);
+          }
+          100%{
+            clip-path: circle(100px at 0% 50%);
+          }
+        }
+        .header {
+          padding:"20px";
+          background-color: #EBF4FF;
+          position: relative;
+          top:"100px";
+        }
+        .content{
+          position: relative;
+          top: 200px;
+        }
         
 </style>
 <body>
-  <font size="7" color="#4B5ED7">This is Allay!</font>
-  <img class="title" src="图片2.png" height=128px width=224px>
+  <h1 class="MainTitle" data-text="This is Allay"></h1>
   
-  <p>
+  <div class="header">
+    <img class="title" src="图片2.png" height=128px width=224px>
+    <font size="6">欢迎来到Allay的火柴盒</font>
+    <font size="5"><br>我悦灵 将会承认你们旅途的价值与意义<br>现在 你们可以尽情欢呼了!</font>
+  </div>
+  <div class="content">
+    <div class="card">
+      <img class="imgShow" src="图片3.png" alt="Avatar" width=228 height=128>
+      <div class="container">
+        <h4><b>我们的小队[悦灵云工作室]</b></h4> 
+        <a href="https://github.com/AllayCloud-Studio">在GitHub上已经有了哦~</a> 
+      </div>
+    </div>
     
-  <font size="6">欢迎来到Allay的火柴盒</font>
-  <font size="5"><br>我悦灵 将会承认你们旅途的价值与意义<br>现在 你们可以尽情欢呼了!</font>
-  
-  <div class="card">
-    <img class="imgShow" src="图片3.png" alt="Avatar" width=228 height=128>
-    <div class="container">
-      <h4><b>我们的小队[悦灵云工作室]</b></h4> 
-      <a href="https://github.com/AllayCloud-Studio">在GitHub上已经有了哦~</a> 
+    <div class="card">
+      <img class="imgShow" src="AllayFocalors.jpg" alt="Avatar" width=128 height=128>
+      <div class="container">
+        <h4><b>悦灵本人[AllayFocalors]</b></h4> 
+        <p>你应该认识我吧</p> 
+        <a href="https://space.bilibili.com/660052393?spm_id_from=333.1007.0.0">我的B站空间</a>
+      </div>
     </div>
-  </div>
-  
-  <div class="card">
-    <img class="imgShow" src="AllayFocalors.jpg" alt="Avatar" width=128 height=128>
-    <div class="container">
-      <h4><b>悦灵本人[AllayFocalors]</b></h4> 
-      <p>你应该认识我吧</p> 
-      <a href="https://space.bilibili.com/660052393?spm_id_from=333.1007.0.0">我的B站空间</a>
+
+    <div class="card">
+      <img class="imgShow" src="icon-5.png" alt="Avatar" width=128 height=128>
+      <div class="con
+      tainer">
+        <h4><b>千里传话</b></h4> 
+        <p>班上已经有不少同学在<br>用了~但是真的很好用哇！</p> 
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container">
+        <h4><b>心动特效</b></h4> 
+        <p>从网上淘来的</p> 
+        <a href="HeartPump.html">体验一下子吧！~</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container">
+        <h4><b>字符流星雨喔~</b></h4> 
+        <p>还是从网上淘来的</p> 
+        <a href="colorfulRaining.html">欣赏吧！~</a>
+      </div>
+      
+    </div>
+      <div class="card">
+      <div class="container">
+        <h4><b>超级炫酷的鼠标特效！</b></h4> 
+        <p>又是从网上淘来的</p> 
+        <a href="StarMouse.html">体验吧！~</a>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="container">
+          <font color="#FF9268" size="4">时刻回家！https://AllayFocalors.GitHub.io<br>网址很好记！就是“ 【Allay的用户名】+ GitHub（给他好吧）.io ”<br>Made by AllayFocalors & AllayCloudStudio</font>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <img class="imgShow" src="icon-5.png" alt="Avatar" width=128 height=128>
-    <div class="container">
-      <h4><b>千里传话</b></h4> 
-      <p>班上已经有不少同学在<br>用了~但是真的很好用哇！</p> 
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="container">
-      <h4><b>心动特效</b></h4> 
-      <p>从网上淘来的</p> 
-      <a href="HeartPump.html">体验一下子吧！~</a>
-    </div>
-  </div>
-
-   <div class="card">
-    <div class="container">
-      <h4><b>字符流星雨喔~</b></h4> 
-      <p>还是从网上淘来的</p> 
-      <a href="colorfulRaining.html">欣赏吧！~</a>
-    </div>
-     
-  </div>
-     <div class="card">
-    <div class="container">
-      <h4><b>超级炫酷的鼠标特效！</b></h4> 
-      <p>又是从网上淘来的</p> 
-      <a href="StarMouse.html">体验吧！~</a>
-    </div>
-  </div>
-  
-  <div class="card">
-    <div class="container">
-        <font color="#FF9268" size="4">时刻回家！https://AllayFocalors.GitHub.io<br>网址很好记！就是“ 【Allay的用户名】+ GitHub（给他好吧）.io ”<br>Made by AllayFocalors & AllayCloudStudio</font>
-    </div>
-  </div>
-
-  <p><br>
 
 </body>
