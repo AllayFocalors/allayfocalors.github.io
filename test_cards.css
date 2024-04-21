@@ -1,0 +1,107 @@
+.container{
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 50px ;
+    gap:  00px 50px;
+}
+
+
+.cards{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background: #4617ff;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.cards:hover{
+    z-index: 1;
+    height: 400px;
+}
+
+.cards .card-content {
+    position: absolute;
+    /* bottom: 0;
+    left: 0;
+    right: 0; */
+    padding: 0.5rem;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out; 
+    /* ↑添加过渡效果 */
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.¾); /* 降低透明度，可以根据需要调整 */
+    color: white;
+    z-index: 1; /* 确保内容½层叠在½图片之上 */
+}
+.cards .title {
+    color: white;
+    font-size: 3rem; /* 增大字号，可以根据需要调整 */
+    margin: 0;
+    text-align: center;
+    line-height: 1; 
+    /* 适当调整行高，以便与图片重叠*/
+}
+.cards .description {
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5; /* 调整行高以适合阅读 */
+}
+.cards .card-content .description {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.cards:hover .card-content .description {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+}
+
+
+.cards .link {
+    color: white;
+    text-decoration: none;
+}
+
+.cards:hover .card-content{
+    /* bottom: calc(16%); */
+    max-height: 1000px;
+    padding: 0;
+}
+
+.cards .imgBx{
+    width:100%;
+    height: calc(100% - 50px);
+    top:-10%;
+    left:0;
+    right:0;
+    position: absolute;
+    border-radius: 20px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    
+}
+.cards:hover .imgShow{
+    border-radius: 32px;
+    box-shadow: 8px 8px rgba(101, 159, 253, 0.9);
+    width: 50%;
+    height: 30%;
+    position:absolute;
+    transform-origin: top left;
+    transform: translate(-130px, -30px);
+    
+    cursor: pointer;
+
+}
