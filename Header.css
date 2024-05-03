@@ -1,0 +1,25 @@
+.TopTitle{
+    color: rgb(103, 128, 255);
+    font-size: 2rem;
+}
+.TopTitleBold {
+    font-size: 8em;
+    margin: 0;
+    display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
+    font-weight: bold; /* 假设需要加粗，可根据实际需求调整 */
+    background: linear-gradient(to right, lightblue, rgb(130, 134, 255),rgb(70, 88, 255),rgb(153, 170, 255));
+    background-clip: text; /* 使背景渐变应用于文字 */
+    color: transparent; /* 使文字颜色透明，显示背景渐变 */
+    background-size: 300%;
+    animation: TextAnim 3s infinite; /* 引用动画名称及设置无限循环 */
+
+}
+
+/* 定义动画关键帧 */
+@keyframes TextAnim {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
