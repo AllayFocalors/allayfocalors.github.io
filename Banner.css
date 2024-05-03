@@ -4,6 +4,7 @@
     border-radius: 8px;
     height: 200px;
     transition: 0.5s;
+    margin: 5rem;
 }
 .Banner:hover{
     height:350px;
