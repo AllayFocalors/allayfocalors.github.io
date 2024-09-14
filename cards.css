@@ -22,8 +22,8 @@
     background: linear-gradient(to right bottom, #6c7bff, #3e44ff);
     border-radius: 20px;
     transition: 3s ease-in-out;
-    margin-top: 5rem;
-    margin: 5rem;
+    margin-top: 2rem;
+    margin: 2rem;
 }
     
 
@@ -57,7 +57,7 @@
         font-weight: bold;
         text-align: center;
         line-height: 1.5; /* 调整行高以适合阅读 */
-        margin-top:7rem;
+        margin-top:2rem;
         padding: 0;
     }
     .cards .link {

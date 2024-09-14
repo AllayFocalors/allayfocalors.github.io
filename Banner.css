@@ -1,13 +1,14 @@
 .Banner{
     position: relative;
-    background-color: rgb(186, 191, 255);
+    background-color: rgb(223, 235, 255);
     border-radius: 8px;
-    height: 200px;
+    height: 100px;
     transition: 0.5s;
-    margin: 5rem;
+    margin: 1rem;
+    width:auto;
 }
 .Banner:hover{
-    height:350px;
+    height:250px;
 }
 
 .BannerContent,
@@ -16,6 +17,7 @@
 .BannerBold {
     margin: 1rem;
     padding: 0;
+    
 }
 
     .BannerImage{
@@ -93,7 +95,7 @@
         }
       }
     .BannerText{
-        color: white;
+        color: rgb(0, 38, 255);
         font-size: 30px;
         font-weight: bold;
         
@@ -102,10 +104,11 @@
         font-weight: bold;
         font-size: 30px;
         color: rgb(255, 255, 255);
-        font-family: '幼圆';
+        font-family: 'Arial';
         font-weight: 999;
         background-color: rgb(80, 92, 255);
         border-radius: 4px;
+        padding: 1%;
     }
 
     .BannerText,
