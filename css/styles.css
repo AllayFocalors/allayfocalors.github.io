@@ -4,6 +4,12 @@
   background-color: black;
   animation: rectangleAnimation 1s ease-in-out forwards;
 }
+body {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 /* 定义关键帧动画 */
 @keyframes rectangleAnimation {
   0% {
