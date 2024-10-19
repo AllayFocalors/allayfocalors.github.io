@@ -1,53 +1,55 @@
 .container{
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 100px 50px;
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 #cards-large{
-    display: block;
+    display: flex;
     justify-content: center;
     width: 100%;
     min-height: 300px;
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(to right bottom, #6c7bff, #3e44ff);
+    background: radial-gradient( farthest-corner at 50% -100px,#acb3ff, #3e44ff);
     border-radius: 20px;
     transition: 3s ease-in-out;
-    margin-top: 2rem;
-    margin: 1rem;
+}
+#cards-large .title{
+    text-shadow: #285dff 0px 0px 10px;
+    transition: 0.5s;
 }
 
 #cards-large:hover{
     height: auto;
     background: linear-gradient(to left, #9ea7ff, #282fff);
+    transition: 1s;
 
 }
     #cards-large:hover .imgShow{
         border-radius: 32px;
         box-shadow: 8px 8px rgba(101, 159, 253, 0.9);
-        width: 30%;
+        width: 20%;
         height: 40%;
         position:absolute;
         transform-origin: top left;
-        transform: translate(-230px, -50px);
+        transform: translate(-430px, 30px);
         cursor: pointer;
-
+    }
+    #cards-large:hover .title{
+        text-shadow: #285dff 0px 0px 100px;
     }
 
 
 .cards{
     display: flex;
-    justify-content: center;
-    width: 46%;
+    width: 60%;
     min-height: 250px;
     position: relative;
-    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     background: linear-gradient(to right bottom, #6c7bff, #3e44ff);
@@ -55,6 +57,7 @@
     transition: 3s ease-in-out;
     margin-top: 2rem;
     margin: 1rem;
+    transition: 1s;
 }
     
 
@@ -124,7 +127,6 @@
     .cards:hover{
         height: auto;
         background: linear-gradient(to left, #7785ff, #3e44ff);
-
     }
         .cards:hover .card-content{
             /* bottom: calc(16%); */

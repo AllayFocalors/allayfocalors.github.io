@@ -5,8 +5,8 @@
   animation: rectangleAnimation 1s ease-in-out forwards;
 }
 body {
-  display:flex;
-  flex-direction: row;
+  display:block;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
 }
