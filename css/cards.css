@@ -8,15 +8,45 @@
     
 }
 
+#cards-large{
+    display: block;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(to right bottom, #6c7bff, #3e44ff);
+    border-radius: 20px;
+    transition: 3s ease-in-out;
+    margin-top: 2rem;
+    margin: 1rem;
+}
+
+#cards-large:hover{
+    height: auto;
+    background: linear-gradient(to left, #9ea7ff, #282fff);
+
+}
+    #cards-large:hover .imgShow{
+        border-radius: 32px;
+        box-shadow: 8px 8px rgba(101, 159, 253, 0.9);
+        width: 30%;
+        height: 40%;
+        position:absolute;
+        transform-origin: top left;
+        transform: translate(-230px, -50px);
+        cursor: pointer;
+
+    }
 
 
 .cards{
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 46%;
     min-height: 250px;
     position: relative;
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;

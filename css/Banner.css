@@ -1,11 +1,12 @@
 .Banner{
-    position: relative;
+    position:relative;
+    display: block;
     background-color: rgb(223, 235, 255);
     border-radius: 8px;
     height: 100px;
     transition: 0.5s;
     margin: 1rem;
-    width:auto;
+    width:100%;
 }
 .Banner:hover{
     height:250px;
