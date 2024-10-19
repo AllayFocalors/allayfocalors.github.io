@@ -1,0 +1,16 @@
+#Title {
+    color:rgb(0, 0, 0);
+    font-size: 60px;
+    justify-content: center;
+    font-weight: 700;
+    background: #9db8ff;
+    border-radius: 10px;
+}
+a {
+    color:royalblue;
+    border: solid 5px;
+    border-radius: 10px;
+    text-underline-offset: -5px;
+    font-size:40px;
+    font-weight: 1000;
+}

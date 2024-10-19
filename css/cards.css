@@ -37,7 +37,7 @@
         height: 40%;
         position:absolute;
         transform-origin: top left;
-        transform: translate(-430px, 30px);
+        transform: translate(-200%, 30px);
         cursor: pointer;
     }
     #cards-large:hover .title{
