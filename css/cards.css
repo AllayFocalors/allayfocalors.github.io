@@ -23,7 +23,6 @@
     text-shadow: #285dff 0px 0px 10px;
     transition: 0.5s;
 }
-
 #cards-large:hover{
     height: auto;
     background: linear-gradient(to left, #9ea7ff, #282fff);
@@ -54,10 +53,8 @@
     align-items: flex-start;
     background: linear-gradient(to right bottom, #6c7bff, #3e44ff);
     border-radius: 20px;
-    transition: 3s ease-in-out;
     margin-top: 2rem;
     margin: 1rem;
-    transition: 1s;
 }
     
 
@@ -113,7 +110,6 @@
         top:-10%;
         position: absolute;
         border-radius: 20px;
-        transition: 0.5s;
         display: flex;
         justify-content: center;
         min-height: 150px;
@@ -123,6 +119,7 @@
         border-width: 1px;
         border-style: solid;
         border-color: #4617ff;
+        
     }
     .cards:hover{
         height: auto;
@@ -131,7 +128,7 @@
         .cards:hover .card-content{
             /* bottom: calc(16%); */
             max-height: 1000px;
-            min-height: 50px;
+            min-height: 0px;
         }
             .cards:hover .card-content .description {
                 opacity: 1;
@@ -141,11 +138,10 @@
         .cards:hover .imgShow{
             border-radius: 32px;
             box-shadow: 8px 8px rgba(101, 159, 253, 0.9);
-            width: 40%;
-            height: 40%;
+            scale: 0.8;
             position:absolute;
             transform-origin: top left;
-            transform: translate(-130px, -30px);
+            transform: translate(-220px, -30px);
             cursor: pointer;
 
         }
