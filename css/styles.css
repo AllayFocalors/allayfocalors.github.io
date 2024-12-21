@@ -104,7 +104,6 @@ body {
 
 header{
     position: absolute;
-   
     text-align: center;
 }
 
@@ -112,7 +111,7 @@ header{
   padding: 20px;
   margin-top: 3rem ;
   border-radius: 16px;
-  background-color: #EBF4FF;
+  background-color: #ffe4d8;
   position: relative;
   top: 10px;
 }

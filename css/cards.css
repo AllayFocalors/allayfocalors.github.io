@@ -56,6 +56,10 @@
     margin-top: 2rem;
     margin: 1rem;
 }
+
+#J-card {
+    background: linear-gradient(to right bottom, #a3c8ff, #b1ffc2);
+}
     
 
     .cards .card-content {
@@ -83,6 +87,9 @@
         line-height: 1; 
         margin-top: 6rem;
         /* 适当调整行高，以便与图片重叠*/
+    }
+    #J-title {
+        color:rgb(72, 197, 97);
     }
     .cards .description {
         font-weight: bold;
@@ -114,11 +121,17 @@
         justify-content: center;
         min-height: 150px;
     }
+
     .cards .imgShow{
         border-radius: 4px;
         border-width: 1px;
         border-style: solid;
         border-color: #4617ff;
+        
+    }
+    #J-img {
+        border-image: linear-gradient(to right, #9ca6ff, #b1ffc2) 1;
+        border-width: 10px;
         
     }
     .cards:hover{
