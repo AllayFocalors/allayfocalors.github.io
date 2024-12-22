@@ -89,7 +89,7 @@
         /* 适当调整行高，以便与图片重叠*/
     }
     #J-title {
-        color:rgb(72, 197, 97);
+        color:rgb(246, 255, 248);
     }
     .cards .description {
         font-weight: bold;
@@ -97,6 +97,7 @@
         line-height: 1.5; /* 调整行高以适合阅读 */
         margin-top:2rem;
         padding: 0;
+        color: rgb(217, 255, 233);
     }
     .cards .link {
         color: white;
@@ -138,6 +139,9 @@
         height: auto;
         background: linear-gradient(to left, #7785ff, #3e44ff);
     }
+        #J-card:hover #J-img{
+            border:rgb(68, 105, 255) 0px solid;
+        }
         .cards:hover .card-content{
             /* bottom: calc(16%); */
             max-height: 1000px;
