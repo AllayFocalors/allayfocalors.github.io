@@ -9,38 +9,40 @@
 
 #cards-large{
     display: flex;
+    margin-top: 3rem;
     justify-content: center;
     width: 100%;
     min-height: 300px;
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    background: radial-gradient( farthest-corner at 50% -100px,#acb3ff, #3e44ff);
+    background: radial-gradient( farthest-corner at 50% -100px,#ff8a8a, #ffd18c);
     border-radius: 20px;
     transition: 3s ease-in-out;
 }
 #cards-large .title{
-    text-shadow: #285dff 0px 0px 10px;
+    text-shadow: #ff7e28 0px 0px 10px;
     transition: 0.5s;
 }
 #cards-large:hover{
     height: auto;
-    background: linear-gradient(to left, #9ea7ff, #282fff);
+    background: linear-gradient(to left, #ffb39e, #ffe5a9);
     transition: 1s;
 
 }
     #cards-large:hover .imgShow{
         border-radius: 32px;
-        box-shadow: 8px 8px rgba(101, 159, 253, 0.9);
-        width: 20%;
-        height: 40%;
+        box-shadow: 8px 8px rgba(253, 187, 101, 0.9);
+        width: 300px;
+        height: 200px;
         position:absolute;
         transform-origin: top left;
-        transform: translate(-200%, 30px);
+        transform: translate(-100%, 130px) rotate3d(-1,1,0,60deg);
         cursor: pointer;
     }
     #cards-large:hover .title{
-        text-shadow: #285dff 0px 0px 100px;
+        text-shadow: #ffa023 0px 0px 50px;
+        transform: rotate3d(1,-1,0,30deg);
     }
 
 
@@ -51,7 +53,7 @@
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(to right bottom, #6c7bff, #3e44ff);
+    background: linear-gradient(to right bottom, #ff9263, #ff2c2c);
     border-radius: 20px;
     margin-top: 2rem;
     margin: 1rem;
@@ -73,6 +75,7 @@
         background-color: rgba(0, 0, 0, 0.¾); /* 降低透明度，可以根据需要调整 */
         color: white;
         z-index: 1; /* 确保内容½层叠在½图片之上 */
+        
     }
         .cards .card-content .description {
             opacity: 0;
@@ -97,19 +100,20 @@
         line-height: 1.5; /* 调整行高以适合阅读 */
         margin-top:2rem;
         padding: 0;
-        color: rgb(217, 255, 233);
+        color: rgb(255, 254, 245);
+        
     }
     .cards .link {
         color: white;
         text-decoration: none;
-        background-color: #4617ff;
+        background-color: #ff4e1d;
         border-radius: 8px;
         border-width: 3px;
         border-style: solid;
         -webkit-border-image: 
-            linear-gradient(to right, #6c7bff, #ffffff) 1 repeat; /* Safari 6-9 */
+            linear-gradient(to right, #ff5555, #ffd2d2) 1 repeat; /* Safari 6-9 */
         border-image: 
-            linear-gradient(to right, #6c7bff, #ffffff) 1 repeat;
+            linear-gradient(to right, #ff9d6c, #ffffff) 1 repeat;
     }
     
     .cards .imgBx{
@@ -127,7 +131,7 @@
         border-radius: 4px;
         border-width: 1px;
         border-style: solid;
-        border-color: #4617ff;
+        border-color: #ffc517;
         
     }
     #J-img {
@@ -137,7 +141,7 @@
     }
     .cards:hover{
         height: auto;
-        background: linear-gradient(to left, #7785ff, #3e44ff);
+        background: linear-gradient(to left, #ffc977, #ff3e3e);
     }
         #J-card:hover #J-img{
             border:rgb(68, 105, 255) 0px solid;
@@ -151,6 +155,7 @@
                 opacity: 1;
                 visibility: visible;
                 transition: opacity 0.5s;
+                transition: rotate3d(0,0,0,0deg);
             }
         .cards:hover .imgShow{
             border-radius: 32px;
