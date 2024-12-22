@@ -1,21 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Allay的火柴盒</title>
-    <link rel="icon" type="image/x-icon" href="./64x64-logo.ico">
-    <link href="./test_styles.css" rel="stylesheet" type="text/css" />
-    <link href="./test_cards.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>纯css跟随鼠标倾斜</title>
+  <style>
+    @font-face {
+      font-family: 'Fredoka One';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/fredokaone/v14/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    *,
+    :after,
+    :before {
+      padding: 0;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      height: 100vh;
+      display: grid;
+      grid-template: repeat(15, 1fr)/repeat(15, 1fr);
+      overflow: hidden
+    }
+
+    .cell {
+      width: 100%;
+      height: 100%;
+      z-index: 2
+    }
+
+    .cell:nth-child(15n+1):hover~.content {
+      --positionX: 0
+    }
+
+    .cell:nth-child(n+1):nth-child(-n+15):hover~.content {
+      --positionY: 0
+    }
+
+    .cell:nth-child(15n+2):hover~.content {
+      --positionX: 1
+    }
+
+    .cell:nth-child(n+16):nth-child(-n+30):hover~.content {
+      --positionY: 1
+    }
+
+    .cell:nth-child(15n+3):hover~.content {
+      --positionX: 2
+    }
+
+    .cell:nth-child(n+31):nth-child(-n+45):hover~.content {
+      --positionY: 2
+    }
+
+    .cell:nth-child(15n+4):hover~.content {
+      --positionX: 3
+    }
+
+    .cell:nth-child(n+46):nth-child(-n+60):hover~.content {
+      --positionY: 3
+    }
+
+    .cell:nth-child(15n+5):hover~.content {
+      --positionX: 4
+    }
+
+    .cell:nth-child(n+61):nth-child(-n+75):hover~.content {
+      --positionY: 4
+    }
+
+    .cell:nth-child(15n+6):hover~.content {
+      --positionX: 5
+    }
+
+    .cell:nth-child(n+76):nth-child(-n+90):hover~.content {
+      --positionY: 5
+    }
+
+    .cell:nth-child(15n+7):hover~.content {
+      --positionX: 6
+    }
+
+    .cell:nth-child(n+91):nth-child(-n+105):hover~.content {
+      --positionY: 6
+    }
+
+    .cell:nth-child(15n+8):hover~.content {
+      --positionX: 7
+    }
+
+    .cell:nth-child(n+106):nth-child(-n+120):hover~.content {
+      --positionY: 7
+    }
+
+    .cell:nth-child(15n+9):hover~.content {
+      --positionX: 8
+    }
+
+    .cell:nth-child(n+121):nth-child(-n+135):hover~.content {
+      --positionY: 8
+    }
+
+    .cell:nth-child(15n+10):hover~.content {
+      --positionX: 9
+    }
+
+    .cell:nth-child(n+136):nth-child(-n+150):hover~.content {
+      --positionY: 9
+    }
+
+    .cell:nth-child(15n+11):hover~.content {
+      --positionX: 10
+    }
+
+    .cell:nth-child(n+151):nth-child(-n+165):hover~.content {
+      --positionY: 10
+    }
+
+    .cell:nth-child(15n+12):hover~.content {
+      --positionX: 11
+    }
+
+    .cell:nth-child(n+166):nth-child(-n+180):hover~.content {
+      --positionY: 11
+    }
+
+    .cell:nth-child(15n+13):hover~.content {
+      --positionX: 12
+    }
+
+    .cell:nth-child(n+181):nth-child(-n+195):hover~.content {
+      --positionY: 12
+    }
+
+    .cell:nth-child(15n+14):hover~.content {
+      --positionX: 13
+    }
+
+    .cell:nth-child(n+196):nth-child(-n+210):hover~.content {
+      --positionY: 13
+    }
+
+    .cell:nth-child(15n+15):hover~.content {
+      --positionX: 14
+    }
+
+    .cell:nth-child(n+211):nth-child(-n+225):hover~.content {
+      --positionY: 14
+    }
+
+    .content {
+      --positionX: 7;
+      --positionY: 7;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+
+    .content,
+    .css {
+      position: absolute
+    }
+
+    .css {
+      font-family: Fredoka One, cursive;
+      top: 50%;
+      left: 50%;
+      animation: color 3s linear infinite;
+      text-shadow: 0 0 10px #000a;
+      transition: all .5s
+    }
+
+    .css:first-child {
+      font-size: 100px;
+      animation-delay: 0s;
+      opacity: .1;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*21px)) translateY(calc(-50% - (var(--positionY) - 7)*21px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(2) {
+      font-size: 110px;
+      animation-delay: -.3s;
+      opacity: .2;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*18px)) translateY(calc(-50% - (var(--positionY) - 7)*18px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(3) {
+      font-size: 120px;
+      animation-delay: -.6s;
+      opacity: .3;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*15px)) translateY(calc(-50% - (var(--positionY) - 7)*15px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(4) {
+      font-size: 130px;
+      animation-delay: -.9s;
+      opacity: .4;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*12px)) translateY(calc(-50% - (var(--positionY) - 7)*12px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(5) {
+      font-size: 140px;
+      animation-delay: -1.2s;
+      opacity: .5;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*9px)) translateY(calc(-50% - (var(--positionY) - 7)*9px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(6) {
+      font-size: 150px;
+      animation-delay: -1.5s;
+      opacity: .6;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*6px)) translateY(calc(-50% - (var(--positionY) - 7)*6px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(7) {
+      font-size: 160px;
+      animation-delay: -1.8s;
+      opacity: .7;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*3px)) translateY(calc(-50% - (var(--positionY) - 7)*3px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(8) {
+      font-size: 170px;
+      animation-delay: -2.1s;
+      opacity: .8;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*0px)) translateY(calc(-50% - (var(--positionY) - 7)*0px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(9) {
+      font-size: 180px;
+      animation-delay: -2.4s;
+      opacity: .9;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*-3px)) translateY(calc(-50% - (var(--positionY) - 7)*-3px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    .css:nth-child(10) {
+      font-size: 190px;
+      animation-delay: -2.7s;
+      opacity: 1;
+      transform: translateX(calc(-50% - (var(--positionX) - 7)*-6px)) translateY(calc(-50% - (var(--positionY) - 7)*-6px)) rotateX(calc(0deg - (var(--positionY) - 7)*5deg)) rotateY(calc((var(--positionX) - 7)*5deg))
+    }
+
+    @keyframes color {
+      0% {
+        color: #ef8f8f
+      }
+
+      10% {
+        color: #efc98f
+      }
+
+      20% {
+        color: #dcef8f
+      }
+
+      30% {
+        color: #a3ef8f
+      }
+
+      40% {
+        color: #8fefb6
+      }
+
+      50% {
+        color: #8fefef
+      }
+
+      60% {
+        color: #8fb6ef
+      }
+
+      70% {
+        color: #a38fef
+      }
+
+      80% {
+        color: #dc8fef
+      }
+
+      90% {
+        color: #ef8fc9
+      }
+
+      to {
+        color: #ef8f8f
+      }
+    }
+  </style>
 </head>
 
-<div class="container">
-    <div class="cards">
-        <div class="imgBx">
-            <img class="imgShow" src="图片3.png" alt="Avatar" width=228 height=128>
-            <div class="imgOverlay"></div>
-        </div>
-        <div class="card-content">
-            <h4 class="title"><b>介绍文本的标题</b></h4> 
-            <p class="description hidden">介绍文本的正文和链接:<br>
-                介绍文本的第二行<br>介绍文本的第三行<br>介绍文本的第四行<br>
-                <a  href="https://github.com/AllayCloud-Studio" class="link"></a></p>
-        </div>
-    </div>
-</div>
+<body>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="cell"></div>
+  <div class="content">
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+    <div class="css">Qayrup</div>
+  </div>
+</body>
+
+</html>

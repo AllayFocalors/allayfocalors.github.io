@@ -4,22 +4,30 @@
 }
 .TopTitleBold {
     font-size: 8em;
+    font-family: "MiSans VF";
     margin: 0;
     display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
     font-weight: bold; /* 假设需要加粗，可根据实际需求调整 */
-    background: linear-gradient(to right, rgb(208, 0, 0),rgb(255, 98, 98), rgb(255, 174, 0),rgb(255, 35, 35));
+    background: linear-gradient(to left, rgb(208, 0, 0),rgb(255, 98, 98), rgb(255, 174, 0),rgb(255, 35, 35));
     background-clip: text; /* 使背景渐变应用于文字 */
     color: transparent; /* 使文字颜色透明，显示背景渐变 */
     background-size: 300%;
     animation: TextAnim 3s infinite; /* 引用动画名称及设置无限循环 */
 
 }
+#sub {
+  font-size:4rem;
+  background: linear-gradient(to right, rgb(248, 170, 170),rgb(255, 98, 98), rgb(255, 201, 86),rgb(255, 111, 111));
+  background-clip: text; /* 使背景渐变应用于文字 */
+  background-size: 500%;
+  font-family: "MiSans VF medium";
+}
 
 /* 定义动画关键帧 */
 @keyframes TextAnim {
   0% { background-position: 0% 0%; }
-  25% { background-position: 100% 0%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 0% 100%; }
+  25% { background-position: 25% 0%; }
+  50% { background-position: 50% 100%; }
+  75% { background-position: 75% 100%; }
   100% { background-position: 0% 50%; }
 }
