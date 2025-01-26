@@ -1,21 +1,20 @@
 .container{
-    position: relative;
-    justify-content: center;
-    align-items: center;
+    margin-top:3rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    /* display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 3rem; */
 }
 
 #cards-large{
     display: flex;
-    margin-top: 3rem;
     justify-content: center;
     width: 100%;
     min-height: 300px;
     position: relative;
     justify-content: center;
-    align-items: flex-start;
     background: radial-gradient( farthest-corner at 50% -100px,#ff8a8a, #ffd18c);
     border-radius: 20px;
     transition: 3s ease-in-out;
@@ -47,16 +46,13 @@
 
 
 .cards{
-    display: flex;
-    width: 60%;
+    width: 80%;
     min-height: 250px;
     position: relative;
     justify-content: center;
-    align-items: flex-start;
     background: linear-gradient(to right bottom, #ff9263, #ff2c2c);
     border-radius: 20px;
-    margin-top: 2rem;
-    margin: 1rem;
+    margin:2rem auto;
 }
 
 #J-card {
@@ -132,12 +128,10 @@
         border-width: 1px;
         border-style: solid;
         border-color: #ffc517;
-        
     }
     #J-img {
         border-image: linear-gradient(to right, #9ca6ff, #b1ffc2) 1;
         border-width: 10px;
-        
     }
     .cards:hover{
         height: auto;
@@ -163,7 +157,7 @@
             scale: 0.8;
             position:absolute;
             transform-origin: top left;
-            transform: translate(-220px, 30px) rotate3d(-1,1,0,300deg);
+            transform: translate(-120px, 30px) rotate3d(-1,1,0,300deg);
             cursor: pointer;
         }
         .cards:hover .title{

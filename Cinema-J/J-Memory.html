@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .MainTitle {
+                color: #353535;
+                font-size: 36px;
+                text-align: center;
+                font-weight: 800;
+                display:block;
+                font-family:"MiSans";
+            }
+            .photo-wall {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 10px;
+                width: 80%;
+                max-width: 1200px;
+                /* 增加动画效果 */
+                animation: fadeIn 0.2s ease-out;
+            }
+            .photo-wall img {
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+                transition: transform 0.7s, box-shadow 0.3s,border-radius 0.5s;
+                /* 添加阴影效果 */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+            .photo-wall img:hover {
+                transform: scale(1.05) rotate(3deg);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                border-radius: 32px;
+            }
+            /* 定义渐入动画 */
+            @keyframes fadeIn {
+                from { opacity: 0;transform: translateY(100px) scaleY(1.2); }
+                to { opacity: 1;transform: translateY(0px) scaleY(1); }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <p class="MainTitle">Our Memory, Our Friends.</p> -->
+        <div class="photo-wall">
+            <img src="img/2025跨年头像.png">
+            <img src="img/璟华班旗.png">
+            <img src="img/Cinema J Logo.png">
+            <img src="img/Cinema.png">
+
+        </div>
+    </body>
+
+</html>
