@@ -8,6 +8,30 @@
     gap: 3rem; */
 }
 
+#cards-small-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin: 0rem auto;
+    width: 100%;
+    justify-content: center;
+    max-width: 80%;
+}
+
+#cards-small-container .cards{
+    margin: 1rem;
+    width:100%;
+    justify-content: center;
+    margin: 1rem auto; 
+}
+#cards-small-container .title{
+    font-size: 2rem;
+}
+#cards-small-container .description{
+    font-size: 0.8rem;
+}
+
 #cards-large{
     display: flex;
     justify-content: center;
