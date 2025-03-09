@@ -158,29 +158,29 @@
   margin: 0;
   display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
   font-weight: bold; /* 假设需要加粗，可根据实际需求调整 */
-  background: linear-gradient(to left, rgb(208, 0, 0),rgb(255, 98, 98), rgb(255, 174, 0),rgb(255, 35, 35));
+  background: linear-gradient(to left, rgb(255, 68, 0),rgb(255, 234, 97), rgb(255, 174, 0),rgb(255, 35, 35));
   background-clip: text; /* 使背景渐变应用于文字 */
   color: transparent; /* 使文字颜色透明，显示背景渐变 */
   background-size: 300%;
   animation-name: TextAnim,WordFontWeight; /* 引用动画名称 */
-  animation-duration: 1.5s; /* 引用动画名称及设置无限循环 */
+  animation-duration: 2s; /* 引用动画名称及设置无限循环 */
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(.76,-0.01,.34,.99);
 }
 
 #sub {
 font-size:4rem;
-background: linear-gradient(to right, rgb(248, 170, 170),rgb(255, 98, 98), rgb(255, 201, 86),rgb(255, 111, 111));
+background: linear-gradient(to right, rgb(67, 136, 255),rgb(101, 255, 98), rgb(0, 106, 255),rgb(0, 255, 13));
 background-clip: text; /* 使背景渐变应用于文字 */
 background-size: 500%;
 font-family: "MiSans VF";
 font-weight:10;
 transition: 0.5s ease-in-out;
-animation:TextAnim 3s infinite;
+animation:TextAnim 5s infinite;
 }
 
 #sub:hover{
-transform: rotate3d(1,1,0,30deg) skew(10deg,20deg);
+transform: skew(10deg,4deg);
 scale:1.5;
 font-weight:1000;
 }
@@ -245,7 +245,7 @@ font-weight:1000;
   font-size: 2rem;
 }
 #cards-small-container .description{
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 #cards-large{
@@ -259,10 +259,23 @@ font-weight:1000;
   border-radius: 20px;
   transition: 3s ease-in-out;
 }
-#cards-large .title{
+.studio-title {
   text-shadow: #ff7e28 0px 0px 10px;
   transition: 0.5s;
 }
+.server-title {
+  text-shadow: #00ff4c 0px 0px 30px;
+  font-size: 5rem !important;
+  font-family: 'MiSans VF', sans-serif;
+  transition: 0.5s;
+}
+.year-title {
+  text-shadow: #4492ff 0px 0px 20px;
+  font-size: 5rem !important;
+  font-family: 'MiSans VF', sans-serif;
+  transition: 0.5s;
+}
+
 #cards-large:hover{
   height: auto;
   background: linear-gradient(to left, #ffb39e, #ffe5a9);
@@ -280,7 +293,7 @@ font-weight:1000;
       cursor: pointer;
   }
   #cards-large:hover .title{
-      text-shadow: #ffa023 0px 0px 50px;
+      text-shadow: #000000 0px 100px 30px;
       transform: rotate3d(1,-1,0,30deg);
   }
 
@@ -325,6 +338,7 @@ font-weight:1000;
       text-align: center;
       line-height: 1; 
       margin-top: 6rem;
+      font-family: 'MiSans VF ', sans-serif;
       /* 适当调整行高，以便与图片重叠*/
   }
   #J-title {
@@ -336,6 +350,7 @@ font-weight:1000;
       line-height: 1.5; /* 调整行高以适合阅读 */
       margin-top:2rem;
       padding: 0;
+      font-family: 'MiSans VF light', sans-serif;
       color: rgb(255, 254, 245);
       
   }
