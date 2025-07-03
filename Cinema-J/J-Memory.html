@@ -1,65 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-            .MainTitle {
-                color: #353535;
-                font-size: 36px;
-                text-align: center;
-                font-weight: 800;
-                display:block;
-                font-family:"MiSans";
-            }
-            .photo-wall {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 10px;
-                width: 80%;
-                max-width: 1200px;
-                /* 增加动画效果 */
-                animation: fadeIn 0.2s ease-out;
-            }
-            .photo-wall img {
-                width: 100%;
-                height: auto;
-                cursor: pointer;
-                transition: transform 0.7s, box-shadow 0.3s,border-radius 0.5s;
-                /* 添加阴影效果 */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-            .photo-wall img:hover {
-                transform: scale(1.05) rotate(3deg);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                border-radius: 32px;
-            }
-            /* 定义渐入动画 */
-            @keyframes fadeIn {
-                from { opacity: 0;transform: translateY(100px) scaleY(1.2); }
-                to { opacity: 1;transform: translateY(0px) scaleY(1); }
-            }
-        </style>
-    </head>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>璟华记忆 - 璟华班回忆录</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">璟华<span>记忆</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#timeline">两年长轴</a></li>
+                <li><a href="#gallery">荣誉墙</a></li>
+                <li><a href="#birthday">生日会</a></li>
+                <li><a href="#memories">资源下载</a></li>
+                <li><a href="#contact">尾声</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <body>
-        <!-- <p class="MainTitle">Our Memory, Our Friends.</p> -->
-        <div class="photo-wall">
-            <img src="img/2025跨年头像.png">
-            <img src="img/璟华班旗.png">
-            <img src="img/Cinema J Logo.png">
-            <img src="img/Cinema.png">
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <h1>璟华记忆</h1>
+        <p>我们还来不及正式告别，我们也不需要告别；<br>
+            我们只需要留住可贵的「记忆」</p>
+        <a href="#timeline" class="btn">开启回忆之旅</a>
+        <video src="./vid/首页视频.mp4" autoplay muted loop></video>
+    </section>
 
+    <!-- 时间线区域 -->
+    <section id="timeline">
+        <div class="section-header">
+            <h2>两年长轴</h2>
+            <p>沿着时间的长河，追溯那些塑造了我们的重要时刻</p>
         </div>
-    </body>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023\8\29</div>
+                    <h3 class="timeline-title">有缘千里来相会</h3>
+                    <p>来自五湖四海的同学们聚到了一块儿，两年的同学缘就此开始。</p>
+                    <!-- <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img"> -->
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023\9</div>
+                    <h3 class="timeline-title">兔灯伴中秋</h3>
+                    <p>那一天，黄老师自费购买兔灯陪我们做手工、过中秋</p>
+                    <img class="timeline-img" src="./img/202310兔灯伴中秋.png">
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023\10</div>
+                    <h3 class="timeline-title">运动会</h3>
+                    <p>我们在班主任与家委的指导下筹备运动会开幕式，成果惊艳。</p>
 
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023\11</div>
+                    <h3 class="timeline-title">从百草园杀到星华实验</h3>
+                    <p>秋游去安吉中南百草园。</p>
+                    <img class="timeline-img" src="./img/202311秋游.png">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023\12\19</div>
+                    <h3 class="timeline-title">拼多多多肉</h3>
+                    <p>班队课黄老师带我们栽种多肉。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023\12\28</div>
+                    <h3 class="timeline-title">元旦汇演</h3>
+                    <p>第一次上舞台。</p>
+                    <video src="./vid/20231228.mp4" class="timeline-img" controls></video>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2024\3\8</div>
+                    <h3 class="timeline-title">妇女节</h3>
+                    <p>手工做花送女神。</p>
+                    <img class="timeline-img" src="./img/202403.png">
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2024\3\?</div>
+                    <h3 class="timeline-title">班主任节</h3>
+                    <p>日期记不清了。这次班主任节筹备相当用心，策划组同学们都尽己所能，给黄老师与同学们带来了难忘的体验
+                        （下面的视频音画不同步，正在努力修复）
+                    </p>
+                    <video class="timeline-img" src="./vid/记忆1压缩版.mp4" controls></video>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-year">2024\4\11</div>
+                    <h3 class="timeline-title">送程宋城</h3>
+                    <p>很多同学都去过一遍了，但是为了46人凑在一块儿，还是兴高采烈地出发了。</p>
+                    <img src="./img/20240411.jpg" class="timeline-img">
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="section-header">
+            <h2>荣誉</h2>
+            <p>这里汇聚的，不仅仅是一张张证书、一座座奖杯，<br>更是我们用汗水浇灌、用青春书写的共同印记。<br>
+                它们是我们并肩走过的见证，<br>是璟华班精神最生动的注脚。<br>
+                这份荣光，属于每一个为梦想奋斗的你我他。</p>
+        </div>
+        
+        <!-- <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="汽车" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>第一次自驾游</h3>
+                    <p>2012年，沿着加州海岸线的难忘旅程</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="山峰" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>挑战高峰</h3>
+                    <p>2016年，登顶富士山的成就感</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="海滩" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>海岛假期</h3>
+                    <p>2018年，马尔代夫的碧海蓝天</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="聚会" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>家庭聚会</h3>
+                    <p>2019年，三代同堂的温馨圣诞</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="美食" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>美食之旅</h3>
+                    <p>2021年，在意大利托斯卡纳的烹饪课程</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="自然" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>自然奇观</h3>
+                    <p>2022年，挪威极光之旅</p>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <section id="birthday">
+        <div class="section-header">
+            <h2>生日会</h2>
+            <p>黄老师给我们过过很多次生日，然而惭愧的是我们还没有给她过一次生日😥.</p>
+        </div>
+    </section>
+
+    <section id="memories">
+        <div class="section-header">
+            <h2>将记忆留在电脑里</h2>
+            <p>从钉钉整理的文件，已上传至阿里云盘</p>
+        </div>
+        
+        <!-- <div class="memories">
+            <div class="memory-card">
+                <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="动物园" class="memory-img">
+                <div class="memory-content">
+                    <span class="memory-date">2014年6月15日</span>
+                    <h3 class="memory-title">第一次带孩子们去动物园</h3>
+                    <p class="memory-excerpt">那天阳光正好，孩子们第一次见到长颈鹿时惊讶的表情，至今仍清晰地印在我的脑海中...</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            
+            <div class="memory-card">
+                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="旅行" class="memory-img">
+                <div class="memory-content">
+                    <span class="memory-date">2017年9月3日</span>
+                    <h3 class="memory-title">独自背包旅行</h3>
+                    <p class="memory-excerpt">三十岁生日那天，我决定独自前往东南亚，三个月的时间让我重新认识了自己...</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </div>
+            
+            <div class="memory-card">
+                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="毕业" class="memory-img">
+                <div class="memory-content">
+                    <span class="memory-date">2020年7月10日</span>
+                    <h3 class="memory-title">女儿的毕业典礼</h3>
+                    <p class="memory-excerpt">看着她自信地走上台领取毕业证书的那一刻，我意识到时间过得如此之快...</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    
+
+    <!-- 联系区域 -->
+    <section class="contact" id="contact">
+        <h2>只要「记忆」在，我们天涯若比邻</h2>
+        <p>两年并非终点，分班只是寻求更好的发展。</p>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>AllayCloud&copy; 2025 璟华记忆</p>
+    </footer>
+
+    <script>
+        // 滚动动画
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏滚动效果
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.style.padding = '10px 5%';
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.padding = '15px 5%';
+                    header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            // 滚动显示元素
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // 观察需要动画的元素
+            document.querySelectorAll('.timeline-item, .gallery-item, .memory-card').forEach(item => {
+                observer.observe(item);
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>

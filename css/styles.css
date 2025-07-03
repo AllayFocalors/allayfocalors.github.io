@@ -1,4 +1,3 @@
-/* 原style.css */
   #animatedRectangle {
     width: 100vw;
     height: 100vh;
@@ -19,7 +18,7 @@
 
   .topImage:hover{
     transform-origin: left top;  
-    transform: rotate3d(-0.5,1,-0.2,40deg);
+    transform: rotate3d(2,0,0.2,40deg);
   }
 
   .topImage:focus{
