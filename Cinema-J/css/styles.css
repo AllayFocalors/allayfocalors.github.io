@@ -273,7 +273,7 @@ section {
 }
 
 .timeline-img {
-    width: 100%;
+    width:100%;
     border-radius: 8px;
     margin-top: 15px;
     transition: var(--transition);
@@ -281,16 +281,42 @@ section {
 
 .timeline-img:hover {
     transform: scale(1.03);
+    /* width: 100%;
+    height:auto; */
 }
 
+@keyframes envelope-move{
+    to {
+        left: -150px;
+    }
+}
+
+/* 46封信 */
+.envelope-img {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    left:100%;
+    animation: envelope-move 5s linear infinite;
+}
+
+.envelope-vid {
+    width: 100%;
+    margin-top: 10%;
+}
+
+/* 荣誉墙 */
+
+
+
 /* 照片画廊 */
-.gallery {
+.honor {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
 }
 
-.gallery-item {
+.honor-item {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
@@ -301,14 +327,14 @@ section {
     transition: var(--transition);
 }
 
-.gallery-img {
+.honor-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
 
-.gallery-overlay {
+.honor-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -326,11 +352,11 @@ section {
     color: white;
 }
 
-.gallery-item:hover .gallery-overlay {
+.honor-item:hover .honor-overlay {
     opacity: 1;
 }
 
-.gallery-item:hover .gallery-img {
+.honor-item:hover .honor-img {
     transform: scale(1.1);
 }
 
@@ -408,6 +434,66 @@ section {
     margin-left: 10px;
 }
 
+/* 资源下载区域 */
+.resources{
+    /* border: var(--dark-color) solid 2px; */
+    border-radius: 5px;
+    position:relative;
+}
+
+.resources h3 {
+    text-align: center;
+    background-color: var(--accent-color);
+}
+
+.resources a {
+    display: block;
+    position:relative;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    border:#FFFFFF solid 1px;
+    margin-top: 2px;
+    overflow: hidden;
+}
+
+.resources a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    transform: scaleX(0); /* 初始缩放为0 */
+    transform-origin: left;
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.resources a::after {
+    content: "→";
+    transition: var(--transition);
+    margin-left: 5px;
+}
+
+.resources a:hover::after {
+    margin-left: 10px;
+}
+
+.resources a:hover::before { 
+    transform: scaleX(1);
+}
+
+.resources a:hover {
+    /* background-color: var(--accent-color); */
+    border:#000000 1px;
+}
+
+
+
 /* 联系区域 */
 .contact {
     background: linear-gradient(to right, var(--primary-color), var(--accent-color));
@@ -454,7 +540,7 @@ section {
 
 /* 页脚 */
 footer {
-    background: var(--dark-color);
+    background: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
     padding: 30px;
