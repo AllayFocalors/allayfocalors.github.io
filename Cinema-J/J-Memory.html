@@ -37,7 +37,7 @@
 
     <section id="timeline">
         <div class="section-header">
-            <h2>两年长轴</h2>
+            <h2>两年的时光</h2>
             <p>沿着时间的长河，追溯那些塑造了我们的重要时刻</p>
         </div>
         
@@ -292,59 +292,20 @@
             <h2>这里有46封信</h2>
             <p>致璟华班的同学们</p>
 
-            <div class="envelope-view">
-                <!-- <img src="./img/时光胶囊/1.jpg" class="envelope-img item1">
-                <img src="./img/时光胶囊/2.jpg" class="envelope-img item2">
-                <img src="./img/时光胶囊/3.jpg" class="envelope-img item3">
-                <img src="./img/时光胶囊/4.jpg" class="envelope-img item4">
-                <img src="./img/时光胶囊/5.jpg" class="envelope-img item5">
-                <img src="./img/时光胶囊/6.jpg" class="envelope-img item6">
-                <img src="./img/时光胶囊/7.jpg" class="envelope-img item7">
-                <img src="./img/时光胶囊/8.jpg" class="envelope-img item8">
-                <img src="./img/时光胶囊/9.jpg" class="envelope-img item9">
-                <img src="./img/时光胶囊/10.jpg" class="envelope-img item10">
-                <img src="./img/时光胶囊/11.jpg" class="envelope-img item11">
-                <img src="./img/时光胶囊/12.jpg" class="envelope-img item12">
-                <img src="./img/时光胶囊/13.jpg" class="envelope-img item13">
-                <img src="./img/时光胶囊/14.jpg" class="envelope-img item14">
-                <img src="./img/时光胶囊/15.jpg" class="envelope-img item15">
-                <img src="./img/时光胶囊/16.jpg" class="envelope-img item16">
-                <img src="./img/时光胶囊/17.jpg" class="envelope-img item17">
-                <img src="./img/时光胶囊/18.jpg" class="envelope-img item18">
-                <img src="./img/时光胶囊/19.jpg" class="envelope-img item19">
-                <img src="./img/时光胶囊/20.jpg" class="envelope-img item20">
-                <img src="./img/时光胶囊/21.jpg" class="envelope-img item21">
-                <img src="./img/时光胶囊/22.jpg" class="envelope-img item22">
-                <img src="./img/时光胶囊/23.jpg" class="envelope-img item23">
-                <img src="./img/时光胶囊/24.jpg" class="envelope-img item24">
-                <img src="./img/时光胶囊/25.jpg" class="envelope-img item25">
-                <img src="./img/时光胶囊/26.jpg" class="envelope-img item26">
-                <img src="./img/时光胶囊/27.jpg" class="envelope-img item27">
-                <img src="./img/时光胶囊/28.jpg" class="envelope-img item28">
-                <img src="./img/时光胶囊/29.jpg" class="envelope-img item29">
-                <img src="./img/时光胶囊/30.jpg" class="envelope-img item30">
-                <img src="./img/时光胶囊/31.jpg" class="envelope-img item31">
-                <img src="./img/时光胶囊/32.jpg" class="envelope-img item32">
-                <img src="./img/时光胶囊/33.jpg" class="envelope-img item33">
-                <img src="./img/时光胶囊/34.jpg" class="envelope-img item34">
-                <img src="./img/时光胶囊/35.jpg" class="envelope-img item35">
-                <img src="./img/时光胶囊/36.jpg" class="envelope-img item36">
-                <img src="./img/时光胶囊/37.jpg" class="envelope-img item37">
-                <img src="./img/时光胶囊/38.jpg" class="envelope-img item38">
-                <img src="./img/时光胶囊/39.jpg" class="envelope-img item39">
-                <img src="./img/时光胶囊/40.jpg" class="envelope-img item40">
-                <img src="./img/时光胶囊/41.jpg" class="envelope-img item41">
-                <img src="./img/时光胶囊/42.jpg" class="envelope-img item42">
-                <img src="./img/时光胶囊/43.jpg" class="envelope-img item43">
-                <img src="./img/时光胶囊/44.jpg" class="envelope-img item44">
-                <img src="./img/时光胶囊/45.jpg" class="envelope-img item45">
-                <img src="./img/时光胶囊/46.jpg" class="envelope-img item46"> -->
-                <!-- <img src="./img/时光胶囊/47.jpg" class="envelope-img item47"> -->
-                <video src="./vid/时光胶囊.mp4" class="envelope-vid" autoplay muted loop>
+            <div class="marquee-container">
+                <div class="marquee-track" id="marqueeTrack"></div>
             </div>
-
         </div>
     </section>
+
+    <!-- 展示荣誉的窗格 -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </div>
+
 
     <section id="honor">
         <div class="section-header">
@@ -352,58 +313,286 @@
             <p>这里汇聚的，不仅仅是一张张证书、一座座奖杯，<br>更是我们用汗水浇灌、用青春书写的共同印记。<br>
                 它们是我们并肩走过的见证，<br>是璟华班精神最生动的注脚。<br>
                 这份荣光，属于每一个为梦想奋斗的你我他。</p>
+        </div>       
+        <div class="honors">
+            <div class="honor-card">
+                <img src="./img/荣誉墙/DO3-3.jpg" alt="期末校级表彰" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\7\4</span>
+                    <h3 class="honor-title">期末校级表彰</h3>
+                    <p class="honor-excerpt">颁发荣誉：校级星辉学子，校级管理之星，年级总评学习之星</p>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+            
+            <div class="honor-card">
+                <img src="./img/荣誉墙/DT4-1.jpg" alt="八下期末考试表彰" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\7\4</span>
+                    <h3 class="honor-title">八下期末考试表彰</h3>
+                    <p class="honor-excerpt">分班前的最后一考。颁发荣誉：各科学习之星、进步之星</p>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+            
+            <div class="honor-card">
+                <img src="./img/荣誉墙/DT3-3.jpg" alt="八下第三次月考表彰" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\6\3</span>
+                    <h3 class="honor-title">八下第三次月考表彰</h3>
+                    <p class="honor-excerpt">颁发荣誉：各科学习之星、进步之星</p>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/DT2-2.jpg" alt="八下期中考表彰" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\4\26</span>
+                    <h3 class="honor-title">八下期中考表彰</h3>
+                    <p class="honor-excerpt">颁发荣誉：各科学习之星、进步之星</p>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/DO1-1.jpg" alt="星小厨" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\3\24</span>
+                    <h3 class="honor-title">八下星小厨表彰</h3>
+                    <p class="honor-excerpt">就是厨神</p>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CT4-1.jpg" alt="八上期末" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\1\21</span>
+                    <h3 class="honor-title">八上期末考表彰</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CT4-21.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\1\21</span>
+                    <h3 class="honor-title">八上期末校级表彰</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CT3-2.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\12\27</span>
+                    <h3 class="honor-title">八上第三次月考表彰</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CT2-2.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\12\27</span>
+                    <h3 class="honor-title">八上期中考表彰</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CT1-2.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">2025\12\27</span>
+                    <h3 class="honor-title">八上第一次月考表彰</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CO1-1.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">日期略</span>
+                    <h3 class="honor-title">道法手抄报获奖</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CO1-2.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">日期略</span>
+                    <h3 class="honor-title">年级科普知识竞赛奖项</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CO1-3.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">日期略</span>
+                    <h3 class="honor-title">科学手工制作</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/CO1-6.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">日期略</span>
+                    <h3 class="honor-title">日新本评比奖项</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+            <div class="honor-card">
+                <img src="./img/荣誉墙/BT4-3.jpg" class="honor-img">
+                <div class="honor-content">
+                    <span class="honor-date">日期略</span>
+                    <h3 class="honor-title">七下期末相关表彰</h3>
+                    <a href="#" class="read-more">浏览</a>
+                </div>
+            </div>
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const modal = document.getElementById('galleryModal');
+                    const closeModal = document.querySelector('.modal .close');
+                    const galleryGrid = document.getElementById('galleryGrid');
+
+                    // 示例：每个 honor-card 对应不同的图片数组路径
+                    const cardImages = [
+                        ['./img/荣誉墙/DO3-1.jpg', './img/荣誉墙/DO3-2.jpg','./img/荣誉墙/DO3-3.jpg'],
+                        ['./img/荣誉墙/DT4-1.jpg', './img/荣誉墙/DT4-2.jpg','./img/荣誉墙/DT4-3.jpg','./img/荣誉墙/DT4-4.jpg','./img/荣誉墙/DT4-5.jpg','./img/荣誉墙/DT4-6.jpg','./img/荣誉墙/DT4-7.jpg','./img/荣誉墙/DT4-8.jpg','./img/荣誉墙/DT4-9.jpg','./img/荣誉墙/DT4-10.jpg','./img/荣誉墙/DT4-11.jpg','./img/荣誉墙/DT4-12.jpg','./img/荣誉墙/DT4-13.jpg','./img/荣誉墙/DT4-14.jpg'],
+                        ['./img/荣誉墙/DT3-1.jpg', './img/荣誉墙/DT3-2.jpg','./img/荣誉墙/DT3-3.jpg','./img/荣誉墙/DT3-4.jpg','./img/荣誉墙/DT3-5.jpg','./img/荣誉墙/DT3-6.jpg','./img/荣誉墙/DT3-7.jpg','./img/荣誉墙/DT3-8.jpg','./img/荣誉墙/DT3-9.jpg','./img/荣誉墙/DT3-10.jpg','./img/荣誉墙/DT3-11.jpg',]
+                        ['./img/荣誉墙/DT2-1.jpg', './img/荣誉墙/DT2-2.jpg','./img/荣誉墙/DT2-3.jpg','./img/荣誉墙/DT2-4.jpg','./img/荣誉墙/DT2-5.jpg','./img/荣誉墙/DT2-6.jpg','./img/荣誉墙/DT2-7.jpg','./img/荣誉墙/DT2-8.jpg','./img/荣誉墙/DT2-9.jpg','./img/荣誉墙/DT2-10.jpg','./img/荣誉墙/DT2-11.jpg','./img/荣誉墙/DT2-12.jpg','./img/荣誉墙/DT2-13.jpg','./img/荣誉墙/DT2-14.jpg','./img/荣誉墙/DT2-15.jpg','./img/荣誉墙/DT2-16.jpg','./img/荣誉墙/DT2-17.jpg'],
+                    ];
+
+                    // 点击 "浏览" 打开模态框并展示对应图片
+                    document.querySelectorAll('.honor-card .read-more').forEach((btn, index) => {
+                        btn.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            modal.classList.add('active');
+                            modal.style.display = 'block';
+
+                            // 清空之前的图片
+                            galleryGrid.innerHTML = '';
+
+                            // 加载当前卡片对应的图片
+                            if (cardImages[index]) {
+                                cardImages[index].forEach(src => {
+                                    const img = document.createElement('img');
+                                    img.src = src;
+                                    galleryGrid.appendChild(img);
+                                });
+                            }
+                        });
+                    });
+
+                    // 关闭模态框
+                    closeModal.addEventListener('click', () => {
+                        modal.classList.remove('active')
+                        // modal.style.display = 'none';
+                    });
+
+                    // 点击遮罩层关闭
+                    window.addEventListener('click', function (event) {
+                        if (event.target === modal) {
+                            // modal.style.display = 'none';
+                            modal.classList.remove('active')
+                        }
+                    });
+                });
+
+            </script>
+
         </div>
+ 
         
-        <!-- <div class="honor">
-            <div class="honor-item">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="汽车" class="honor-img">
-                <div class="honor-overlay">
-                    <h3>第一次自驾游</h3>
-                    <p>2012年，沿着加州海岸线的难忘旅程</p>
-                </div>
-            </div>
-            
-            <div class="honor-item">
-                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="山峰" class="honor-img">
-                <div class="honor-overlay">
-                    <h3>挑战高峰</h3>
-                    <p>2016年，登顶富士山的成就感</p>
-                </div>
-            </div>
-            
-            <div class="honor-item">
-                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="海滩" class="honor-img">
-                <div class="honor-overlay">
-                    <h3>海岛假期</h3>
-                    <p>2018年，马尔代夫的碧海蓝天</p>
-                </div>
-            </div>
-            
-            <div class="honor-item">
-                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="聚会" class="honor-img">
-                <div class="honor-overlay">
-                    <h3>家庭聚会</h3>
-                    <p>2019年，三代同堂的温馨圣诞</p>
-                </div>
-            </div>
-            
-            <div class="honor-item">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="美食" class="honor-img">
-                <div class="honor-overlay">
-                    <h3>美食之旅</h3>
-                    <p>2021年，在意大利托斯卡纳的烹饪课程</p>
-                </div>
-            </div>
-            
-            <div class="honor-item">
-                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="自然" class="honor-img">
-                <div class="honor-overlay">
-                    <h3>自然奇观</h3>
-                    <p>2022年，挪威极光之旅</p>
-                </div>
-            </div>
-        </div> -->
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           
+            // 图片数据和标签
+            const images = [
+                { id: 1,},
+                { id: 2,},
+                { id: 3,},
+                { id: 4,},
+                { id: 5,},
+                { id: 6,},
+                { id: 7,},
+                { id: 8,},
+                { id: 9,},
+                { id: 10 },
+                { id: 11 },
+                { id: 12 },
+                { id: 13 },
+                { id: 14 },
+                { id: 15 },
+                { id: 16 },
+                { id: 17 },
+                { id: 18 },
+                { id: 19 },
+                { id: 20 },
+                { id: 21 },
+                { id: 22 },
+                { id: 23 },
+                { id: 24 },
+                { id: 25 },
+                { id: 26 },
+                { id: 27 },
+                { id: 28 },
+                { id: 29 },
+                { id: 30 },
+                { id: 31 },
+                { id: 32 },
+                { id: 33 },
+                { id: 34 },
+                { id: 35 },
+                { id: 36 },
+                { id: 37 },
+                { id: 38 },
+                { id: 39 },
+                { id: 40 },
+                { id: 41 },
+                { id: 42 },
+                { id: 43 },
+                { id: 44 },
+                { id: 45 },
+                { id: 46 },
+                { id: 47 },
+            ];
+            
+            // 创建图片元素
+            function createImageElements() {
+                // 创建两组相同的图片实现无缝循环
+                for (let i = 0; i < 2; i++) {
+                    images.forEach(img => {
+                        const item = document.createElement('div');
+                        item.className = 'marquee-item';
+                        const imgElement = document.createElement('img');
+                        imgElement.src = `./img/时光胶囊/${img.id}.jpg`;
+                        
+                        const label = document.createElement('div');
+                        label.className = 'image-label';
+                        label.textContent = img.name;
+                        
+                        item.appendChild(imgElement);
+                        item.appendChild(label);
+                        marqueeTrack.appendChild(item);
+                    });
+                }
+            }
+            
+            createImageElements();
+            
+
+        });
+    </script>
 
     <section id="birthday">
         <div class="section-header">
@@ -411,38 +600,70 @@
             <p>黄老师给我们过过很多次生日，然而惭愧的是我们还没有给她过一次生日😥。</p>
         </div>
 
-        <!-- <div class="memories">
-            <div class="memory-card">
-                <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="动物园" class="memory-img">
-                <div class="memory-content">
-                    <span class="memory-date">2014年6月15日</span>
-                    <h3 class="memory-title">第一次带孩子们去动物园</h3>
-                    <p class="memory-excerpt">那天阳光正好，孩子们第一次见到长颈鹿时惊讶的表情，至今仍清晰地印在我的脑海中...</p>
-                    <a href="#" class="read-more">阅读全文</a>
+        <div class="birthday">
+            <div class="birthday-item">
+                <img src="./img/生日会/七上10月预览图.png" alt="七上10月生日会" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2023\10</h3>
+                    <p>第一次过生日，大惊喜！</p>
+                    <a href="./vid/七上10月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
                 </div>
             </div>
             
-            <div class="memory-card">
-                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="旅行" class="memory-img">
-                <div class="memory-content">
-                    <span class="memory-date">2017年9月3日</span>
-                    <h3 class="memory-title">独自背包旅行</h3>
-                    <p class="memory-excerpt">三十岁生日那天，我决定独自前往东南亚，三个月的时间让我重新认识了自己...</p>
-                    <a href="#" class="read-more">阅读全文</a>
+            <div class="birthday-item">
+                <img src="./img/生日会/七上11月预览图.png" alt="七上11月生日会" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2023\11</h3>
+                    <p>第二次过生日，蛋糕从教室后方降临！</p>
+                    <a href="./vid/七上11月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
                 </div>
             </div>
             
-            <div class="memory-card">
-                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="毕业" class="memory-img">
-                <div class="memory-content">
-                    <span class="memory-date">2020年7月10日</span>
-                    <h3 class="memory-title">女儿的毕业典礼</h3>
-                    <p class="memory-excerpt">看着她自信地走上台领取毕业证书的那一刻，我意识到时间过得如此之快...</p>
-                    <a href="#" class="read-more">阅读全文</a>
+            <div class="birthday-item">
+                <img src="./img/生日会/七上12月预览图.png" alt="七上12月生日会" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2023\12</h3>
+                    <p>突然停电，蛋糕偷袭！</p>
+                    <a href="./vid/七上12月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
                 </div>
             </div>
-        </div> -->
+            
+            <div class="birthday-item">
+                <img src="./img/生日会/七上1月预览图.png" alt="七上1月" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2024\1</h3>
+                    <p>这次生日首次使用礼炮</p>
+                    <a href="./vid/七上1月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
+                </div>
+            </div>
+            
+            <div class="birthday-item">
+                <img src="./img/生日会/七下3月预览图.png" alt="七下3月生日会" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2024\3</h3>
+                    <p>全班在球场围圆过生日。</p>
+                    <a href="./vid/七下3月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
+                </div>
+            </div>
+            
+            <div class="birthday-item">
+                <img src="./img/生日会/七下4月预览图.png" alt="七下4月生日会" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2024\4</h3>
+                    <p>教室秒变演唱会现场，人人手挥荧光棒。</p>
+                    <a href="./vid/七下4月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
+                </div>
+            </div>
 
+            <div class="birthday-item">
+                <img src="./img/生日会/七下6月预览图.png" alt="七下6月生日会" class="birthday-img">
+                <div class="birthday-overlay">
+                    <h3>2024\6</h3>
+                    <p>暑假两个月的生日一块儿过了</p>
+                    <a href="./vid/七下6月.mp4" class="btn " style="height:40px;padding:10px;border-radius: 5px;font-size:1rem;">观看生日视频</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="resources">
@@ -451,10 +672,11 @@
             <p>从钉钉整理的群视频、图片资源，已进行初步分类并上传至123云盘，各位可以免费下载。</p>
         </div>
         <div class="resources">
-                <h3 class="resources">文件列表 提取码：7911</h3>
-                <a class="resources" href="https://www.123865.com/s/uIp8Vv-IQDmH" target="_blank">七上资源整理包</a>
-                <a class="resources" href="https://www.123865.com/s/uIp8Vv-MQDmH" target="_blank">八上资源整理包</a>
-                <a class="resources" href="https://www.123865.com/s/uIp8Vv-wQDmH" target="_blank">八下资源整理包</a>
+                <h3 class="resources-header">文件列表 提取码：7911</h3>
+                <a class="btn" href="https://www.123865.com/s/uIp8Vv-IQDmH" target="_blank">七上钉群图片视频资源整理包</a>
+                <a class="btn" href="https://www.123865.com/s/uIp8Vv-71DmH" target="_blank">七下钉群图片视频资源整理包</a>
+                <a class="btn" href="https://www.123865.com/s/uIp8Vv-MQDmH" target="_blank">八上钉群图片视频资源整理包</a>
+                <a class="btn" href="https://www.123865.com/s/uIp8Vv-wQDmH" target="_blank">八下钉群图片视频资源整理包</a>
         </div>
 
         
@@ -462,17 +684,18 @@
 
     
 
-    <!-- 联系区域 -->
     <section class="contact" id="contact">
         <h2>只要「记忆」在，我们天涯若比邻</h2>
         <p>两年并非终点，分班只是寻求更好的发展。愿各位心中有怀念，脚下有道路，眼前有未来。这个网站将会长期运营，只要有「记忆」在，即使身处天涯海角，我们也会无限接近。</p>
         <div class="social-links">
             <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
             <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
         </div>
+        
     </section>
+
+
 
     <!-- 页脚 -->
     <footer>
@@ -512,7 +735,7 @@
             }, observerOptions);
             
             // 观察需要动画的元素
-            document.querySelectorAll('.timeline-item, .honor-item, .memory-card').forEach(item => {
+            document.querySelectorAll('.timeline-item, .marquee-item, .birthday-item, .honor-card').forEach(item => {
                 observer.observe(item);
             });
             
