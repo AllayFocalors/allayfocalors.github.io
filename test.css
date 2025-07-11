@@ -1,0 +1,115 @@
+* {
+    --Ani_fold: 0.5s cubic-bezier(.14,.63,.19,1.27);
+}
+
+.foldcard {
+    display: flex;
+    flex-direction: row;
+    width: 660px;
+    perspective: 400px;
+    transform-style: preserve-3d;
+}
+
+.foldleft {
+    border-radius: 10px;
+    background-color: #b1d1ff;
+    transition: all var(--Ani_fold);
+    transform-origin: 100% 0%;
+}
+
+.foldcard img {
+    border-radius: 10px;
+    display: inline-block;
+    height: 300px;
+    margin: 10px;
+    align-self: center;
+}
+
+.text {
+    margin: 0rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    height:320px;
+    border-radius: 10px;
+    background-color: #b1d1ff;
+    transform: rotateY(100deg);
+    transition: all var(--Ani_fold);
+    transform-origin: 0% 50%;
+}
+
+.foldcard .text h1 {
+    display: block;
+    position: relative;
+    margin-top: 0;
+    line-height: 0%;
+    font-family: 'MiSans';
+    font-size: 2.5rem;
+    /* transform-origin: 0% 50%;
+    transform: rotateY(90deg); */
+    transition: all 1s ease;
+}
+.foldcard .text h2 {
+    display: block;
+    position: relative;
+    font-family: 'MiSans';
+    font-weight: 400;
+    line-height: 110%;
+    /* transform-origin: 0% 50%;
+    transform: rotateY(90deg); */
+    margin-top: 0;
+    transition: all 1s ease;
+}
+.foldcard:hover .text {
+    transform: rotateY(0deg);
+}
+.foldcard:hover .foldleft {
+    transform: rotateY(-20deg);
+}
+
+.flipcard {
+    display: flex;
+    perspective: 600px;
+}
+
+.flip-front {
+    position: absolute;
+    transform: rotateY(0deg);
+    transition: all 0.5s;
+    z-index: 99;
+}
+
+.flipcard:hover .flip-front {
+    transform: rotateY(180deg);
+    z-index: -99;
+}
+
+.flip-front img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    z-index: -99;
+    background-color: #b1d1ff;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.flipcard:hover .flip-back {
+    transform: rotateY(360deg);
+    z-index: 99;
+}
+
+.flip-back h1 {
+    width: 200px;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}

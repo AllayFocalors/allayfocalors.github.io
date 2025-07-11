@@ -1,187 +1,70 @@
-  #animatedRectangle {
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    animation: rectangleAnimation 1s ease-in-out forwards;
-  }
-  body {
-    display:block;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
 
-  .topImage{
-      transition: 0.3s;
-      border-radius: 32px;
-  }
-
-  .topImage:hover{
-    transform-origin: left top;  
-    transform: rotate3d(2,0,0.2,40deg);
-  }
-
-  .topImage:focus{
-      border-width: 100px;
-  }
-
-  .title {
-    transition: 0.3s;
-    margin: 0%;
-    float: cen;
-  }
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 16px;
-    padding: 16px 16px;
-    transform: translate(0px, 128px);
-    color: "#5da6ff";
-    background: "#f0f1ff";
-    margin: 32px;
-  }
-
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transform: translate(0px, 128px);
-  }
-
-  .imgShow {
-    box-shadow: 0 0 0 0;
-    transition: 0.8s;
-  }
-
-  .MainTitle {
-    color: #353535;
-    font-family: helvetica;
-    font-size: 8rem;
-    position: relative;
-    letter-spacing: -0.5rem;
-    margin-top: 10rem;
-    padding: 0;
-  }
-
-  .MainTitle::after {
-      content: attr(data-text);
-      color: transparent;
-      position: relative;
-      top: 100px;
-      background: url(./img/colorbg1.png);
-      clip-path: circle(500px at 50% 50%);
-      animation: movelight 5s infinite;
-      background-clip: text;
-  }
-
-  .ani:hover {
-    animation: getin 1s infinite;
-  }
-
-  @keyframes getin {
-    0% {
-      size: 100%;
-    }
-    100% {
-      size: 0%;
-    }
-  }
-
-  @keyframes movelight {
-    0% {
-      clip-path: circle(260px at 20% 50%);
-    }
-    25%{
-      clip-path: circle(100px at 50% 20%);
-    }
-    50% {
-      clip-path: circle(60px at 10% 80%);
-    }
-    100% {
-      clip-path: circle(260px at 20% 50%);
-    }
-  }
-
-  header{
-      position: absolute;
-      text-align: center;
-  }
-
-  .header {
-    padding: 20px;
-    margin-top: 3rem ;
-    border-radius: 16px;
-    background-color: #ffe4d8;
-    position: relative;
-    top: 10px;
-  }
-
-  .content {
-    position: relative;
-    top: 200px;
-  }
-
-  .card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-  } 
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  
-/* 原Header.css */
-.TopTitle{
-  color: rgb(255, 133, 57);
-  font-size: 2rem;
+.top {
+  display: flex;
 }
+
+.TopTitle{
+  color: rgb(57, 80, 255);
+  font-size: 2rem;
+  font-family: 'MiSans';
+  line-height: 120%;
+  
+}
+
+.TopTitleBG {
+  background: rgba(0, 76, 255, 0.288);
+  width: 200%;
+  left: -50%;
+  position: relative;
+  align-self: center;
+  align-content: center;
+  transform: skew(-10deg,-2deg);
+}
+
 .TopTitleBold {
-  font-size: 8em;
+  font-size: 6em;
+  margin:1rem;
+  /* transform: skew(-10deg,-2deg); */
   font-family: "MiSans VF";
-  margin: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
   display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
   font-weight: bold; /* 假设需要加粗，可根据实际需求调整 */
-  background: linear-gradient(to left, rgb(255, 68, 0),rgb(255, 234, 97), rgb(255, 174, 0),rgb(255, 35, 35));
+  background: linear-gradient(to left, rgb(0, 76, 255),rgb(97, 144, 255), rgb(0, 102, 255),rgb(35, 108, 255));
   background-clip: text; /* 使背景渐变应用于文字 */
   color: transparent; /* 使文字颜色透明，显示背景渐变 */
   background-size: 300%;
   animation-name: TextAnim,WordFontWeight; /* 引用动画名称 */
-  animation-duration: 2s; /* 引用动画名称及设置无限循环 */
-  animation-iteration-count: infinite;
+  animation-duration: 1s; /* 引用动画名称及设置无限循环 */
+  animation-iteration-count: 2 ;
   animation-timing-function: cubic-bezier(.76,-0.01,.34,.99);
 }
 
 #sub {
-font-size:4rem;
-background: linear-gradient(to right, rgb(67, 136, 255),rgb(101, 255, 98), rgb(0, 106, 255),rgb(0, 255, 13));
-background-clip: text; /* 使背景渐变应用于文字 */
-background-size: 500%;
-font-family: "MiSans VF";
-font-weight:10;
-transition: 0.5s ease-in-out;
-animation:TextAnim 5s infinite;
+  transition: 0.5s ease;
 }
 
-#sub:hover{
-transform: skew(10deg,4deg);
-scale:1.5;
-font-weight:1000;
+#sub .TopTitleBold{
+  font-size:3rem;
+  margin: 0;
+  background: linear-gradient(to right, rgb(67, 136, 255),rgb(101, 255, 98), rgb(0, 106, 255),rgb(0, 255, 13));
+  background-clip: text; /* 使背景渐变应用于文字 */
+  background-size: 500%;
+  font-family: "MiSans VF";
+  font-weight:10;
+  transition: 0.5s ease;
+  animation:TextAnim 5s infinite;
+}
+
+#sub:hover {
+  transform: skew(10deg,4deg);
+}
+
+#sub:hover .TopTitleBold{
+  
+  scale:1.2;
+  font-weight:1000;
 }
 
 /* 定义动画关键帧 */
@@ -194,421 +77,334 @@ font-weight:1000;
 }
 
 @keyframes WordFontWeight {
-0% { font-weight: 170; }
-50% { font-weight: 670; }
-100% { font-weight: 170; }
+0% { font-weight: 670; }
+50% { font-weight: 170; }
+100% { font-weight: 670; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 原cards.css */
-.container{
-  margin-top:3rem;
-  display: flex;
-  flex-direction: column;
-}
-
-#cards-small-container{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 10px;
-  margin: 0rem auto;
-  width: 100%;
-  justify-content: center;
-  max-width: 80%;
-}
-
-#cards-small-container .cards{
-  margin: 1rem;
-  width:100%;
-  margin: 1rem auto; 
-}
-#cards-small-container .title{
-  font-size: 2rem;
-}
-#cards-small-container .description{
-  font-size: 1rem;
-}
-
-#cards-large{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  min-height: 300px;
-  position: relative;
-  justify-content: center;
-  background: radial-gradient( farthest-corner at 50% -100px,#ff8a8a, #ffd18c);
+.header {
+  padding: 10px;
   border-radius: 20px;
-  transition: 3s ease-in-out;
-}
-.studio-title {
-  text-shadow: #ff7e28 0px 0px 10px;
-  transition: 0.5s;
-}
-.server-title {
-  text-shadow: #00ff4c 0px 0px 30px;
-  font-size: 5rem !important;
-  font-family: 'MiSans VF', sans-serif;
-  transition: 0.5s;
-}
-.year-title {
-  text-shadow: #4492ff 0px 0px 20px;
-  font-size: 5rem !important;
-  font-family: 'MiSans VF', sans-serif;
-  transition: 0.5s;
-}
-
-#cards-large:hover{
-  height: auto;
-  background: linear-gradient(to left, #ffb39e, #ffe5a9);
-  transition: 1s;
-
-}
-  #cards-large:hover .imgShow{
-      border-radius: 32px;
-      box-shadow: 8px 8px rgba(253, 187, 101, 0.9);
-      width: 300px;
-      height: 200px;
-      position:absolute;
-      transform-origin: top left;
-      transform: translate(-100%, 130px) rotate3d(-1,1,0,60deg);
-      cursor: pointer;
-  }
-  #cards-large:hover .title{
-      text-shadow: #000000 0px 100px 30px;
-      transform: rotate3d(1,-1,0,30deg);
-  }
-
-
-.cards{
-  width: 80%;
-  min-height: 250px;
+  background-color: #d8e4ff;
   position: relative;
-  justify-content: center;
-  background: linear-gradient(to right bottom, #ff9263, #ff2c2c);
-  border-radius: 20px;
-  margin:2rem auto;
+  margin: 40px;
+  transform: skew(-10deg,-2deg);
 }
 
-#J-card {
-  background: linear-gradient(to right bottom, #a3c8ff, #b1ffc2);
+/* 新版翻转卡片效果 */
+
+* {
+    --Ani_fold: 0.5s cubic-bezier(.58,.01,.07,1.26);
 }
-  
 
-  .cards .card-content {
-      position: relative;
-      margin-top: 1rem;
-      padding: 0.5rem;
-      max-height: 0;
-      transition: max-height 0.5s ease-out, padding 0.5s ease-out; 
-      /* ↑添加过渡效果 */
-      padding: 0;
-      background-color: rgba(0, 0, 0, 0.¾); /* 降低透明度，可以根据需要调整 */
-      color: white;
-      z-index: 1; /* 确保内容½层叠在½图片之上 */
-      
+@keyframes a_arrow {
+  0%{
+    transform: translateX(0px);
   }
-      .cards .card-content .description {
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.5s, visibility 0s 0.5s;
-      }
-  .cards .title {
-      position: relative;
-      color: white;
-      font-size: 3rem; /* 增大字号，可以根据需要调整 */
-      text-align: center;
-      line-height: 1; 
-      margin-top: 6rem;
-      font-family: 'MiSans VF ', sans-serif;
-      /* 适当调整行高，以便与图片重叠*/
+  50% {
+    transform: translateX(10px);
   }
-  #J-title {
-      color:rgb(246, 255, 248);
+  100% {
+    transform: translateX(0px);
   }
-  .cards .description {
-      font-weight: bold;
-      text-align: center;
-      line-height: 1.5; /* 调整行高以适合阅读 */
-      margin-top:2rem;
-      padding: 0;
-      font-family: 'MiSans VF light', sans-serif;
-      color: rgb(255, 254, 245);
-      
-  }
-  .cards .link {
-      color: white;
-      text-decoration: none;
-      background-color: #ff4e1d;
-      border-radius: 8px;
-      border-width: 3px;
-      border-style: solid;
-      -webkit-border-image: 
-          linear-gradient(to right, #ff5555, #ffd2d2) 1 repeat; /* Safari 6-9 */
-      border-image: 
-          linear-gradient(to right, #ff9d6c, #ffffff) 1 repeat;
-  }
-  
-  .cards .imgBx{
-      width:100%;
-      height: calc(100% - 50px);
-      top:-10%;
-      position: absolute;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      min-height: 150px;
-  }
+}
 
-  .cards .imgShow{
-      border-radius: 4px;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #ffc517;
-  }
-  #J-img {
-      border-image: linear-gradient(to right, #9ca6ff, #b1ffc2) 1;
-      border-width: 10px;
-  }
-  .cards:hover{
-      height: auto;
-      background: linear-gradient(to left, #ffc977, #ff3e3e);
-  }
-      #J-card:hover #J-img{
-          border:rgb(68, 105, 255) 0px solid;
-      }
-      .cards:hover .card-content{
-          /* bottom: calc(16%); */
-          max-height: 1000px;
-          min-height: 0px;
-      }
-          .cards:hover .card-content .description {
-              opacity: 1;
-              visibility: visible;
-              transition: opacity 0.5s;
-              transition: rotate3d(0,0,0,0deg);
-          }
-      .cards:hover .imgShow{
-          border-radius: 32px;
-          box-shadow: 8px 8px rgba(101, 159, 253, 0.9);
-          scale: 0.8;
-          position:absolute;
-          transform-origin: top left;
-          transform: translate(-120px, 30px) rotate3d(-1,1,0,300deg);
-          cursor: pointer;
-      }
-      .cards:hover .title{
-          margin-top: 2rem;
-      }
+a::before {
+  content:'>';
+  display: inline-flex;
+  animation: a_arrow 1s infinite var(--Ani_fold);
+  margin-right: 10px;
+  color: white;
+}
 
+#folds {
+  margin: 1rem 9rem;
+}
 
+#flips {
+  margin: 1rem 9rem;
+}
 
+.foldcard {
+    display: inline-flex;
+    flex-direction: row;
+    justify-self: center;
+    width: 900px;
+    perspective: 400px;
+    margin: 2rem 0;
+    transform-style: preserve-3d;
+}
 
+.foldleft {
+    border-radius: 10px 0px 0px 10px;
+    background-color: #b1d1ff;
+    transition: all var(--Ani_fold);
+    transform-origin: 100% 0%;
+    padding: 10px;
+}
 
+.foldcard img {
+    border-radius: 10px;
+    display: inline-block;
+    height: 300px;
+    align-self: center;
+    justify-self: center;
+}
 
+.foldcard .foldright {
+    margin: 0rem;
+    padding:22px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    height:280px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #b1d1ff;
+    transform: rotateY(100deg);
+    transition: all var(--Ani_fold);
+    transform-origin: 0% 50%;
+}
 
+.foldcard .foldright h1 {
+    display: block;
+    position: relative;
+    margin-top: 0;
+    line-height: 100%;
+    font-family: 'MiSans';
+    font-size: 2.5rem;
+    transition: all 1s ease;
+}
+.foldcard .foldright h2 {
+    display: block;
+    position: relative;
+    font-family: 'MiSans';
+    font-weight: 400;
+    line-height: 110%;
+    margin-top: 0;
+    transition: all 1s ease;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-/* 原Banner.css */
-.Banner{
-  position:relative;
+.foldcard .foldright a {
+  color:#4492ff;
   display: block;
-  background-color: rgb(223, 235, 255);
-  border-radius: 16px;
-  height: 150px;
-  transition: 0.5s;
-  margin: 1rem;
-  width:100%;
-}
-.Banner:hover{
-  height:20rem;
+  text-align: center;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: 'MiSans';
+  font-size: 1.5rem;
+  font-weight: 800;
+  position: absolute;
+  bottom: 2rem;
+  transition: all var(--Ani_fold);
 }
 
-.BannerContent,
-.BannerTitle,
-.BannerText,
-.BannerBold {
-  margin: 1rem;
-  padding: 0;
-  align-items: center;
+.foldcard .foldright a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #acffa8;
+    transform: scaleX(0); /* 初始缩放为0 */
+    transform-origin: left;
+    transition: var(--Ani_fold);
+    z-index: -1;
+}
+
+.foldcard .foldright a:hover::after {
+    transform: scaleX(1); /* 鼠标悬停时缩放为1 */
+}
+
+.foldcard .foldright a:hover {
+  transform: scale(1.2);
+  margin-left: 40px;
+}
+
+.foldcard:hover .foldright {
+    transform: rotateY(0deg);
+}
+.foldcard:hover .foldleft {
+    transform: rotateY(-20deg);
+}
+
+.flipcard {
+    display: inline-flex;
+    perspective: 600px;
+    width:300px;
+    height:300px;
+}
+
+.flip-front {
+    position: absolute;
+    transform: rotateY(0deg);
+    transition: all 0.5s;
+    z-index: 99;
+}
+
+.flipcard:hover .flip-front {
+    transform: rotateY(180deg);
+    z-index: -99;
+}
+
+.flip-front img {
+    width: 100%;
+    border-radius: 10px;
+    /* border:#000000 solid 1px; */
+}
+
+.flipcard:hover .flip-front img {
+  border:0;
+}
+
+.flipcard::before {
+  left:-5px;
+  border: solid 5px #000000;
+  content: '';
+  position: absolute;
+  transform-origin: 50% 50%;
+  justify-self: center;
+  align-self:center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.flipcard:hover::before {
+  animation: pulse_border 0.5s ease-in-out;
+}
+@keyframes pulse_border{
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 130%;
+  }
+  100% {
+    scale: 100%;
+    transform: rotateY(-180deg);
+  }
+}
+.flip-back {
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+    z-index: -99;
+    background-color: #b1d1ff;
+    padding: 20px;
+    width: 100%;
+    height: 100%-20px;
+    border-radius: 10px;
+    
+}
+
+.flipcard:hover .flip-back {
+  transform: rotateY(360deg);
+  z-index: 99;
+}
+
+.flip-back h1 {
+    width: 200px;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    font-size: 2rem;
+    font-family: 'MiSans';
+    font-weight: 1000;
+}
+
+.flip-back p {
+  font-size: 1.3rem;
+  font-family: 'MiSans';
+  line-height: 110%;
+}
+
+.flip-back a {
+  color: #4492ff;
+  display: block;
+  line-height: 100%;
+  bottom: 30px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  transition: all var(--Ani_fold);
+  font-size: 1.2rem;
+}
+
+.flip-back a:hover {
+  color: #b4ffbe;
+  font-weight: 1000;
+  font-size: 1.3rem;
+}
+
+
+
+
+.content {
+  position: relative;
+  top: 200px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
+} 
+                  
+
+.contact {
+  background: linear-gradient(to right, rgba(51, 105, 255, 0.749),#FFFFFF);
+  color:#ffffff;
+  width: 200%;
+  left: -50%;
+  position: absolute;
+  text-align: center;
+  padding: 100px 20px;
+  height: 50px;
+  transform: skew(-10deg,-2deg) ;
 }
 
-  .BannerContent{
-      position: relative;
-      margin: 1rem;
-      
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top:-3rem;
+}
+
+.social-link {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.5rem;
+    transition: var(--Ani_fold);
+}
+
+.social-link:hover {
+    background: white;
+    color: rgba(51, 105, 255, 0.749);
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px){
+  body {
+      display: block;
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+  }
+  .TopTitleBold {
+      font-size: 10rem;
   }
 
-  .BannerTitle{
-      position: relative;
-      color: transparent;
-      font-size: 4rem; /* 增大字号，可以根据需要调整 */
-      display: inline-block;
-      line-height: 1; 
-      margin-top: 0;
-      padding:0;
-      top: 0px;
-      line-height: 0.9;
-      background: linear-gradient(to right,
-      rgb(115, 103, 255),
-      rgb(99, 107, 255),
-      rgb(83, 92, 255),
-      rgb(0, 128, 255));
-      background-clip: text;
-      background-size: 1000%;
-      animation: TextAnim 2s infinite;
-      margin-top: 10px;
-  }
-  @keyframes TextAnim {
-      0% {
-          background-position: 0% 20%;
-      }
-      25% {
-          background-position: 50% 50%;
-      }
-      50% {
-          background-position: 20% 75%;
-      }
-      75%{
-          background-position: 100% 100%;
-      }
-      100% {
-          background-position: 0% 20%;
-      }
-  }
-  .BannerText{
-      color: rgb(0, 38, 255);
-      font-size: 30px;
-      font-weight: bold;
-      
-  }
-  .BannerBold{
-      font-weight: bold;
-      font-size: 30px;
-      color: rgb(255, 255, 255);
-      font-family: 'Arial';
-      font-weight: 999;
-      background-color: rgb(80, 92, 255);
-      border-radius: 4px;
-      padding: 1%;
+  .TopTitle {
+      font-size: 3rem;
   }
 
-  .BannerText,
-  .BannerBold {
-      opacity: 0; /* 初始隐藏，不占用空间 */
-      transition: opacity 0.3s ease; /* 添加过渡效果，使淡入淡出平滑 */
-  }
-
-  .Banner:hover .BannerText,
-  .Banner:hover .BannerBold {
-      opacity: 1; /* 当鼠标悬停在.Banner上时，淡入显示 */
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @media (max-width: 768px){
-    body {
-        display: block;
-        flex-direction: column;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .topImage {
-        width: 100%;
-        height: auto;
-        border-radius: 16px;
-    }
-
-    .TopTitleBold {
-        font-size: 10rem;
-    }
-
-    .TopTitle {
-        font-size: 3rem;
-    }
-
-    .cards {
-        width: 100%;
-        margin: 16px;
-        border-radius: 16px;
-        min-height: 200px;
-        justify-content: center;
-        margin:2rem auto;
-    }
-
-    .cards .title{
-      font-family: 'MiSans VF Thin';
-    }
-
-    #cards-small-container {
-      margin: 1rem;
-      justify-content: center;
-      margin: 1rem auto; 
-      max-width: 100%;
-    }
-    #cards-small-container .description {
-      font-size: 1.5rem;
-    }
-
-    .card-content {
-        padding: 16px;
-    }
-
-    .imgShow {
-        border-radius: 16px;
-    }
-
-    .description{
-        font-size: 1.5rem;
-        font-family: 'MiSans VF light';
-    }
-  }
+}

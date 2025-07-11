@@ -643,10 +643,10 @@ section {
     transform: scaleX(1);
 }
 
-.resources a:hover {
-    /* background-color: var(--accent-color); */
+/* .resources a:hover {
+    background-color: var(--accent-color);
     border:#000000 1px;
-}
+} */
 
 
 

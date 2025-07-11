@@ -686,16 +686,33 @@
 
     <section class="contact" id="contact">
         <h2>只要「记忆」在，我们天涯若比邻</h2>
-        <p>两年并非终点，分班只是寻求更好的发展。愿各位心中有怀念，脚下有道路，眼前有未来。这个网站将会长期运营，只要有「记忆」在，即使身处天涯海角，我们也会无限接近。</p>
+        <p>两年并非终点，分班只是寻求更好的发展。愿各位心中有怀念，脚下有道路，眼前有未来。这个网站将会长期运营，只要有「记忆」在，即使身处天涯海角，我们也会无限接近。同学们对于该网站有任何建议，都可以通过下列联系方式反馈。</p>
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+            <!-- <a href="#" class="social-link"><i class="fab fa-weixin"></i></a> -->
+            <!-- <a href="#" class="social-link"><i class="fab fa-qq"></i></a> -->
             <a href="#" class="social-link"><i class="far fa-envelope"></i></a>
         </div>
         
     </section>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 为每个社交图标添加点击事件
+            document.querySelectorAll('.social-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // 阻止默认跳转行为
+                    
+                    if (this.querySelector('.fab.fa-weixin')) {
+                        alert('略');
+                    } else if (this.querySelector('.fab.fa-qq')) {
+                        alert('略');
+                    } else if (this.querySelector('.far.fa-envelope')) {
+                        alert('邮箱：allayfocalors@163.com');
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- 页脚 -->
     <footer>
