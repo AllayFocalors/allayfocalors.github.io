@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
-    <style>
-        
-    </style>
+    <script src="main.js" type="module"></script>
 </head>
 <body>
+
+    <div class="loading-container">
+        <div class="loading-BG"></div>
+        <div class="loading-bar">
+            <div class="loading-color"></div>
+        </div>  
+        <div class="loading-text">
+            <div class="loading-logo">璟华<span>记忆</span></div>
+            <div class="loading-num"></div>
+        </div>
+    </div>    
+
     <header>
         <div class="logo">璟华<span>记忆</span></div>
         <nav>
@@ -32,7 +42,7 @@
         <p>我们还来不及正式告别，我们也不需要告别；<br>
             我们只需要留住可贵的「记忆」</p>
         <a href="#timeline" class="btn">开启回忆之旅</a>
-        <video src="./vid/首页视频.mp4" autoplay muted loop></video>
+        <video src="./vid/首页视频.mp4"  id="video" autoplay muted loop></video>
     </section>
 
     <section id="timeline">
@@ -55,7 +65,7 @@
                     <div class="timeline-year">2023\9</div>
                     <h3 class="timeline-title">兔灯伴中秋</h3>
                     <p>那一天，黄老师自费购买兔灯陪我们做手工、过中秋</p>
-                    <img class="timeline-img" src="./img/202310兔灯伴中秋.png">
+                    <img class="timeline-img" src="./img/202310兔灯伴中秋.png" id="image">
                 </div>
             </div>
             
@@ -73,7 +83,7 @@
                     <div class="timeline-year">2023\11</div>
                     <h3 class="timeline-title">从百草园杀到星华实验</h3>
                     <p>秋游去安吉中南百草园。</p>
-                    <img class="timeline-img" src="./img/202311秋游.png">
+                    <img class="timeline-img" src="./img/202311秋游.png" id="image">
                 </div>
             </div>
 
@@ -90,7 +100,7 @@
                     <div class="timeline-year">2023\12\28</div>
                     <h3 class="timeline-title">元旦汇演</h3>
                     <p>第一次上舞台。</p>
-                    <video src="./vid/20231228.mp4" class="timeline-img" controls></video>
+                    <video src="./vid/20231228.mp4"  id="video" class="timeline-img" controls></video>
                 </div>
             </div>
 
@@ -99,7 +109,7 @@
                     <div class="timeline-year">2024\3\8</div>
                     <h3 class="timeline-title">妇女节</h3>
                     <p>手工做花送女神。</p>
-                    <img class="timeline-img" src="./img/202403.png">
+                    <img class="timeline-img" src="./img/202403.png" id="image">
                 </div>
             </div>
 
@@ -119,7 +129,7 @@
                     <div class="timeline-year">2024\4\11</div>
                     <h3 class="timeline-title">春游去宋城</h3>
                     <p>很多同学都去过一遍了，但是为了46人凑在一块儿，还是兴高采烈地出发了。</p>
-                    <img src="./img/20240411.jpg" class="timeline-img">
+                    <img src="./img/20240411.jpg" class="timeline-img" id="image">
                 </div>
             </div>
 
@@ -128,7 +138,7 @@
                     <div class="timeline-year">2024\4\26</div>
                     <h3 class="timeline-title">喝奶茶</h3>
                     <p>黄老师请全班喝了奶茶。Cheers!</p>
-                    <img src="./vid/20240426.mp4" class="timeline-img" controls>
+                    <img src="./vid/20240426.mp4" id="video"  class="timeline-img" controls     >
                 </div>
             </div>
 
@@ -137,7 +147,7 @@
                     <div class="timeline-year">2024\4\26</div>
                     <h3 class="timeline-title">朗诵比赛</h3>
                     <p>排练了许久的朗诵作品“青春中国”。</p>
-                    <img src="./vid/20240426朗诵比赛.mp4" class="timeline-img" controls>
+                    <img src="./vid/20240426朗诵比赛.mp4"  id="video" class="timeline-img" controls>
                 </div>
             </div>
 
@@ -146,7 +156,7 @@
                     <div class="timeline-year">2024\5\13</div>
                     <h3 class="timeline-title">值周表演啦</h3>
                     <p>上台演唱了《Try Everything》，相当出色！</p>
-                    <img src="./vid/20240513.mp4" class="timeline-img" controls>
+                    <img src="./vid/20240513.mp4" id="video"  class="timeline-img" controls>
                 </div>
             </div>
 
@@ -155,7 +165,7 @@
                     <div class="timeline-year">2024\5\20</div>
                     <h3 class="timeline-title">我们的第一个520日</h3>
                     <p>这一天的课上我们一起用气球做了狗子。</p>
-                    <img src="./vid/20240520.mp4" class="timeline-img" controls>
+                    <img src="./vid/20240520.mp4"  id="video" class="timeline-img" controls>
                 </div>
             </div>
 
@@ -172,7 +182,7 @@
                     <div class="timeline-year">2024\9\12</div>
                     <h3 class="timeline-title">手工漆扇</h3>
                     <p>黄老师与家委带我们制作漆扇</p>
-                    <img src="./vid/20240912.mp4" class="timeline-img" controls>
+                    <img src="./vid/20240912.mp4"  id="video" class="timeline-img" controls>
                 </div>
             </div>
 
@@ -181,7 +191,7 @@
                     <div class="timeline-year">2024\9\26</div>
                     <h3 class="timeline-title">又是一年运动会</h3>
                     <p>这次开幕式抽到的国家是法国（其实是我选的），不过在家委与黄老师的指导下，我们班用凝聚力诠释了：命题作文的开幕式表演也能很出色。</p>
-                    <img src="./vid/20240926.mp4" class="timeline-img" controls>
+                    <img src="./vid/20240926.mp4"  id="video" class="timeline-img" controls>
                 </div>
             </div>
 
@@ -190,7 +200,7 @@
                     <div class="timeline-year">2024\10\21</div>
                     <h3 class="timeline-title">值周节目</h3>
                     <p>这次的表演是《与子同袍》，rap排练虽难，但是同学们都坚持了下来，在舞台上大放异彩。</p>
-                    <img src="./vid/20241021.mp4" class="timeline-img" controls>
+                    <img src="./vid/20241021.mp4" id="video" class="timeline-img" controls>
                 </div>
             </div>
 
@@ -255,7 +265,7 @@
                     <div class="timeline-year">2025\5\12</div>
                     <h3 class="timeline-title">从云上草原杀到星华实验</h3>
                     <p>春游去安吉云上草原，风光不错，项目丰富。</p>
-                    <img src="./vid/20250512.mp4" class="timeline-img" controls>
+                    <img src="./vid/20250512.mp4" id="video" class="timeline-img" controls>
                 </div>
             </div>
 
@@ -316,7 +326,7 @@
         </div>       
         <div class="honors">
             <div class="honor-card">
-                <img src="./img/荣誉墙/DO3-3.jpg" alt="期末校级表彰" class="honor-img">
+                <img src="./img/荣誉墙/DO3-3.jpg" alt="期末校级表彰" class="honor-img"  id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\7\4</span>
                     <h3 class="honor-title">期末校级表彰</h3>
@@ -326,7 +336,7 @@
             </div>
             
             <div class="honor-card">
-                <img src="./img/荣誉墙/DT4-1.jpg" alt="八下期末考试表彰" class="honor-img">
+                <img src="./img/荣誉墙/DT4-1.jpg" alt="八下期末考试表彰" class="honor-img"  id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\7\4</span>
                     <h3 class="honor-title">八下期末考试表彰</h3>
@@ -336,7 +346,7 @@
             </div>
             
             <div class="honor-card">
-                <img src="./img/荣誉墙/DT3-3.jpg" alt="八下第三次月考表彰" class="honor-img">
+                <img src="./img/荣誉墙/DT3-3.jpg" alt="八下第三次月考表彰" class="honor-img"  id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\6\3</span>
                     <h3 class="honor-title">八下第三次月考表彰</h3>
@@ -346,7 +356,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/DT2-2.jpg" alt="八下期中考表彰" class="honor-img">
+                <img src="./img/荣誉墙/DT2-2.jpg" alt="八下期中考表彰" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\4\26</span>
                     <h3 class="honor-title">八下期中考表彰</h3>
@@ -356,7 +366,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/DO1-1.jpg" alt="星小厨" class="honor-img">
+                <img src="./img/荣誉墙/DO1-1.jpg" alt="星小厨" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\3\24</span>
                     <h3 class="honor-title">八下星小厨表彰</h3>
@@ -366,7 +376,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CT4-1.jpg" alt="八上期末" class="honor-img">
+                <img src="./img/荣誉墙/CT4-1.jpg" alt="八上期末" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\1\21</span>
                     <h3 class="honor-title">八上期末考表彰</h3>
@@ -375,7 +385,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CT4-21.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CT4-21.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\1\21</span>
                     <h3 class="honor-title">八上期末校级表彰</h3>
@@ -384,7 +394,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CT3-2.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CT3-2.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\12\27</span>
                     <h3 class="honor-title">八上第三次月考表彰</h3>
@@ -393,7 +403,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CT2-2.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CT2-2.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\12\27</span>
                     <h3 class="honor-title">八上期中考表彰</h3>
@@ -402,7 +412,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CT1-2.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CT1-2.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">2025\12\27</span>
                     <h3 class="honor-title">八上第一次月考表彰</h3>
@@ -411,7 +421,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CO1-1.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CO1-1.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">日期略</span>
                     <h3 class="honor-title">道法手抄报获奖</h3>
@@ -420,7 +430,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CO1-2.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CO1-2.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">日期略</span>
                     <h3 class="honor-title">年级科普知识竞赛奖项</h3>
@@ -429,7 +439,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CO1-3.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CO1-3.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">日期略</span>
                     <h3 class="honor-title">科学手工制作</h3>
@@ -438,7 +448,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/CO1-6.jpg" class="honor-img">
+                <img src="./img/荣誉墙/CO1-6.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">日期略</span>
                     <h3 class="honor-title">日新本评比奖项</h3>
@@ -447,7 +457,7 @@
             </div>
 
             <div class="honor-card">
-                <img src="./img/荣誉墙/BT4-3.jpg" class="honor-img">
+                <img src="./img/荣誉墙/BT4-3.jpg" class="honor-img" id="image">
                 <div class="honor-content">
                     <span class="honor-date">日期略</span>
                     <h3 class="honor-title">七下期末相关表彰</h3>
