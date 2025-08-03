@@ -702,10 +702,9 @@ section {
     text-decoration: none;
     color: var(--text-color);
     transition: var(--transition);
-    border:#FFFFFF solid 1px;
     margin-top: 2px;
     overflow: hidden;
-}
+} 
 
 .resources a::before {
     content: '';
@@ -715,30 +714,29 @@ section {
     width: 100%;
     height: 100%;
     background-color: var(--accent-color);
-    transform: scaleX(0); /* 初始缩放为0 */
+    transform: scaleX(0);
     transform-origin: left;
     transition: var(--transition);
     z-index: -1;
 }
 
-.resources a::after {
+ .resources a::after {
     content: "→";
     transition: var(--transition);
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 .resources a:hover::after {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .resources a:hover::before { 
     transform: scaleX(1);
-}
+} 
 
-/* .resources a:hover {
+ .resources a:hover {
     background-color: var(--accent-color);
-    border:#000000 1px;
-} */
+}
 
 
 
