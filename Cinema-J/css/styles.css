@@ -23,7 +23,7 @@ body {
     background-color: var(--light-color);
     line-height: 1.6;
     overflow-x: hidden;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .loading-container {
@@ -67,7 +67,6 @@ body {
     font-family: 'Noto Serif SC', serif;
     font-size: 3rem;
     color: white;
-    
 }
 
 .loading-num {
@@ -78,16 +77,28 @@ body {
 
 .loading-logo {
     font-family: 'Playfair Display', serif;
+    display:block;
     font-size: 1.8rem;
-    
     color: var(--accent-color);
     font-weight: 700;
     position: absolute;
     letter-spacing: 1px;
-    transform-origin: 70% 50%;
+    /* transform-origin: 70% 50%; */
+    top:50%;
+    left:50%;
     transform: scale(4);
     transition: all 2s ease;
 }
+
+.loading-text p {
+    display:block;
+    font-size:1.5rem;
+    text-align: center;
+    margin: 2rem;
+    color:#FFFFFF;
+    font-family:'Playfair Display', serif ;
+}
+
 .loading-logo span {
     color: var(--primary-color);
 }
