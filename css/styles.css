@@ -3,7 +3,10 @@
   src: url('./AozoraMincho-thin.ttf') format('truetype'); /* 指定字体文件路径和格式 */
 
 }
-
+:root {
+  --Color_globalBlue: rgb(103, 132, 255);
+  --Color_globalLightBlue: rgb(148, 168, 255);
+}
 /* 英雄区域 */
 .hero {
     height: 100vh;
@@ -12,7 +15,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 0px;
     position: relative;
     overflow: hidden;
     color: white;
@@ -24,25 +27,11 @@
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(60px);
-  color:#4492ff;
+  color:var(--Color_globalBlue);
   animation: fadeUp 1s forwards 0.3s;
 }
 
-
-.top {
-  display: flex;
-}
-
-.TopTitle{
-  color: rgb(57, 80, 255);
-  font-size: 2rem;
-  font-family: 'MiSans';
-  line-height: 120%;
-  
-}
-
 .TitleBG {
-  background: rgba(0, 76, 255, 0.288);
   width: 100%;
   left: 0;
   position: relative;
@@ -50,30 +39,20 @@
   align-content: center;
 }
 
-.ActiveBGColor {
-  display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
-  background: linear-gradient(to left, rgb(0, 76, 255),rgb(97, 144, 255), rgb(0, 102, 255),rgb(35, 108, 255));
-  background-clip: text; /* 使背景渐变应用于文字 */
-  color: transparent; /* 使文字颜色透明，显示背景渐变 */
-  background-size: 300%;
-  animation-name: TextAnim; /* 引用动画名称 */
-  animation-duration: 1s; /* 引用动画名称及设置无限循环 */
-  animation-iteration-count: 2 ;
-  animation-timing-function: cubic-bezier(.76,-0.01,.34,.99);
-  transition:0.5s;
+.TitleBG.top {
+  background: rgba(0, 76, 255, 0.288);
 }
 
-.TopTitleBold {
+.TitleBG h1 {
   font-size: 6em;
   margin:1rem;
-  /* transform: skew(-10deg,-2deg); */
   font-family: "MiSans VF";
   position: relative;
   text-align: center;
   width: 100%;
   display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
   font-weight: bold; /* 假设需要加粗，可根据实际需求调整 */
-  background: linear-gradient(to left, rgb(0, 76, 255),rgb(97, 144, 255), rgb(0, 102, 255),rgb(35, 108, 255));
+  background: linear-gradient(to left, var(--Color_globalBlue),rgb(97, 144, 255), rgb(0, 102, 255),rgb(35, 108, 255));
   background-clip: text; /* 使背景渐变应用于文字 */
   color: transparent; /* 使文字颜色透明，显示背景渐变 */
   background-size: 300%;
@@ -83,31 +62,39 @@
   animation-timing-function: cubic-bezier(.76,-0.01,.34,.99);
 }
 
-#sub {
+.TitleBG.sub {
+  background: rgba(0, 255, 21, 0.127);
   transition: 0.5s ease;
 }
 
-#sub .TopTitleBold{
+.TitleBG h2 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: transparent; /* 使文字颜色透明，显示背景渐变 */
+  animation-name: TextAnim,WordFontWeight; /* 引用动画名称 */
+  animation-duration: 1s; /* 引用动画名称及设置无限循环 */
+  animation-iteration-count: 2 ;
+  animation-timing-function: cubic-bezier(.76,-0.01,.34,.99);
   font-size:3rem;
   margin: 0;
-  background: linear-gradient(to right, rgb(67, 136, 255),rgb(101, 255, 98), rgb(0, 106, 255),rgb(0, 255, 13));
+  display: inline-block; /* 为了使背景渐变仅作用于文字，确保元素为inline-block或block */
+  font-weight: bold; /* 假设需要加粗，可根据实际需求调整 */
+  background: linear-gradient(to right, var(--Color_globalLightBlue),rgb(101, 255, 98), rgb(0, 106, 255),rgb(0, 255, 13));
   background-clip: text; /* 使背景渐变应用于文字 */
   background-size: 500%;
   font-family: "MiSans VF";
   font-weight:10;
   transition: 0.5s ease;
-  animation:TextAnim 5s infinite;
+  animation:TextAnim 5s infinite;  
 }
 
-#sub:hover {
+.TitleBG.sub:hover h2{
   transform: skew(10deg,4deg);
-}
-
-#sub:hover .TopTitleBold{
-  
   scale:1.2;
   font-weight:1000;
 }
+
 
 /* 定义动画关键帧 */
 @keyframes TextAnim {
@@ -124,14 +111,24 @@
 100% { font-weight: 670; }
 }
 
-.header {
-  padding: 10px;
-  border-radius: 20px;
-  background-color: #d8e4ff;
-  position: relative;
-  margin: 40px;
-  /* transform: skew(-10deg,-2deg); */
+@font-face {
+  font-family: 'misans-light';         /* 定义字体名称 */
+  src: url('./MiSans-Light.ttf') format('truetype'); /* 指定字体文件路径和格式 */
+
 }
+
+#introduction {
+    background: rgba(0, 76, 255, 0.094);
+}
+
+#text {
+  font-family: 'MiSans-Light';
+  width:80%;
+  text-align: center;
+  margin: 0 auto;
+  color:var(--Color_globalBlue);
+}
+
 
 /* 新版翻转卡片效果 */
 
@@ -168,10 +165,10 @@ a::before {
 }
 
 .foldcard {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
-    justify-self: center;
-    width: 900px;
+    justify-self: left;
+    max-width: 900px;
     perspective: 400px;
     margin: 2rem 0;
     transform-style: preserve-3d;
@@ -230,7 +227,7 @@ a::before {
 }
 
 .foldcard .foldright a {
-  color:#4492ff;
+  color:var(--Color_globalBlue);
   display: block;
   text-align: center;
   overflow: hidden;
@@ -363,7 +360,7 @@ a::before {
 }
 
 .flip-back a {
-  color: #4492ff;
+  color: var(--Color_globalBlue);
   display: block;
   line-height: 100%;
   bottom: 30px;
