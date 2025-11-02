@@ -5,9 +5,11 @@
 }
 :root {
   --Color_globalBlue: rgb(103, 132, 255);
+  --Color_globalPurpleBlue: #6C87FF;
   --Color_globalLightBlue: rgb(148, 168, 255);
+  --Color_globalLightBlue_bg:rgba(148, 168, 255, 0.1);
 }
-/* 英雄区域 */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -25,6 +27,7 @@
   font-family: '宋体';
   font-size: 3rem;
   margin-bottom: 20px;
+  font-weight:10;
   opacity: 0;
   transform: translateY(60px);
   color:var(--Color_globalBlue);
@@ -117,16 +120,18 @@
 
 }
 
-#introduction {
-    background: rgba(0, 76, 255, 0.094);
+.parent_section {
+  background: var(--Color_globalLightBlue_bg);
 }
 
 #text {
   font-family: 'MiSans-Light';
   width:80%;
   text-align: center;
-  margin: 0 auto;
-  color:var(--Color_globalBlue);
+  justify-self: center;
+  color:var(--Color_globalPurpleBlue);
+  background: var(--Color_globalLightBlue_bg);
+  border-radius: 10px;
 }
 
 
@@ -170,7 +175,7 @@ a::before {
     justify-self: left;
     max-width: 900px;
     perspective: 400px;
-    margin: 2rem 0;
+    margin: 3rem;
     transform-style: preserve-3d;
 }
 
@@ -271,10 +276,11 @@ a::before {
 }
 
 .flipcard {
-    display: inline-flex;
+    display: flex;
     perspective: 600px;
     width:300px;
     height:300px;
+    justify-self: center;
 }
 
 .flip-front {
@@ -348,13 +354,13 @@ a::before {
     word-wrap: break-word;
     overflow-wrap: anywhere;
     white-space: normal;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'MiSans';
     font-weight: 1000;
 }
 
 .flip-back p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: 'MiSans';
   line-height: 110%;
 }
