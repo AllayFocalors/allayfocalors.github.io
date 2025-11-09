@@ -34,7 +34,7 @@
 
 
 .hero h1{
-  font-family: '宋体';
+  font-family: 'STSONG.ttt';
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight:10;
@@ -478,7 +478,7 @@ a::before {
 }
 
 /* 移动端适配 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) , screen and (hover: none), screen and (pointer: coarse){
   /* 调整标题字体大小 */
   .hero h1 {
     font-size: 2rem;
@@ -561,5 +561,36 @@ a::before {
   
   .contact h3 {
     font-size: 1rem;
+  }
+}
+
+
+/* 针对触摸设备的优化 */
+@media (pointer: coarse) {
+  .flipcard {
+    transition: none;
+  }
+  
+  .flipcard:hover .flip-front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipcard:hover .flip-back {
+    transform: rotateY(360deg);
+  }
+  
+  .foldcard:hover .foldright {
+    transform: rotateX(0deg);
+  }
+  
+  .foldcard:hover .foldleft {
+    transform: rotateX(50deg);
+  }
+}
+
+/* 针对鼠标设备 */
+@media (pointer: fine) {
+  .flipcard {
+    cursor: pointer;
   }
 }
