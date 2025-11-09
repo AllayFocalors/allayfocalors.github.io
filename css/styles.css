@@ -118,8 +118,8 @@
 }
 
 .TitleBG.sub:hover h2{
-  transform: skew(10deg,4deg);
-  scale:1.2;
+  transform: skew(13deg,1deg);
+  scale:1;
   font-weight:1000;
 }
 
@@ -320,6 +320,7 @@ a::before {
   height:240px;
   justify-self: center;
   margin:10px;
+  height:fit-content;
 }
 
 .flip-front {
@@ -329,7 +330,11 @@ a::before {
   z-index: 99;
   overflow: hidden;
   width:100%;
+  height:100%;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flipcard:hover .flip-front {
@@ -340,7 +345,7 @@ a::before {
 .flip-front img {
   width: 100%;
   border-radius: 10px;
-  /* transform:translateX(40px); */
+  object-fit: cover;
   transition: all var(--Ani_fold);
 }
 
@@ -383,12 +388,15 @@ a::before {
   transition: all 0.5s;
   z-index: -99;
   background-color: rgba(169, 185, 255, 0.5);
-  padding: 20px;
+  padding: 10px;
   width: 100%;
-  height: 100%-20px;
+  height: calc(100%px);
   border-radius: 10px;
   filter:blur(10px);
+  box-sizing: border-box;
 }
+
+
 
 .flipcard:hover .flip-back {
   transform: rotateY(360deg);
@@ -403,12 +411,13 @@ a::before {
     font-size: 1.5rem;
     font-family: 'MiSans';
     font-weight: 1000;
+    line-height: 100%;
 }
 
 .flip-back p {
   font-size: 1.2rem;
   font-family: 'MiSans';
-  line-height: 110%;
+  line-height: 100%;
 }
 
 .flip-back a {
@@ -452,23 +461,6 @@ a::before {
   line-height: 00%;
 }
 
-
-@media (max-width: 768px){
-  body {
-      display: block;
-      flex-direction: column;
-      justify-content: space-around;
-      flex-wrap: wrap;
-  }
-  .TopTitleBold {
-      font-size: 10rem;
-  }
-
-  .TopTitle {
-      font-size: 3rem;
-  }
-
-}
 .fade-up-animation {
     animation: fadeUp 1s forwards 1.1s;
 }
@@ -483,4 +475,91 @@ a::before {
 .appear {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  /* 调整标题字体大小 */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .TitleBG h1 {
+    font-size: 3rem;
+  }
+  
+  .TitleBG h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* 调整文本内容字体大小 */
+  #text {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  
+  /* 折叠卡片在移动端的样式 */
+  #folds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .foldcard {
+    flex-direction: column;
+    width: 90% !important;
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+  
+  .foldleft {
+    border-radius: 10px 10px 0 0;
+    transform-origin: 50% 100%;
+  }
+
+  .foldleft img {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .foldcard .foldright {
+    border-radius: 0 0 10px 10px;
+    transform: rotateX(-100deg);
+    transform-origin: 50% 0%;
+    height: auto;
+    min-height: 300px;
+  }
+  
+  .foldcard:hover .foldleft {
+    transform: rotateX(50deg);
+  }
+  
+  .foldcard:hover .foldright {
+    transform: rotateX(0deg);
+  }
+  
+  /* 翻转卡片在移动端的样式 */
+  #flips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flipcard {
+    width: 90% !important;
+    margin: 1rem auto;
+    aspect-ratio: 1;
+  }
+
+  .flip-back {
+    height:calc(100%-20px);
+  }
+  /* 联系方式区域调整 */
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact h3 {
+    font-size: 1rem;
+  }
 }
